@@ -5,7 +5,7 @@ import sys
 from PIL import ImageDraw
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "..", "utils"))
-from pixel_art import new_canvas, save  # noqa: E402
+from pixel_art import new_canvas, save, save_animated  # noqa: E402
 
 ITEM_DIR = os.path.join(
     os.path.dirname(__file__), "..", "src", "main", "resources", "assets", "dawnbound", "textures", "item"
@@ -258,12 +258,24 @@ def gen_fire_pit_logs():
     return img
 
 
-def gen_fire_pit_flame():
-    img = new_canvas()
-    d = ImageDraw.Draw(img)
-    d.polygon([(8, 2), (12, 8), (10, 14), (6, 14), (4, 8)], fill=(235, 140, 40, 255), outline=(150, 60, 10, 255))
-    d.polygon([(8, 6), (10, 10), (9, 14), (7, 14), (6, 10)], fill=(255, 220, 110, 255))
-    return img
+def gen_fire_pit_flame_frames():
+    outer = (235, 140, 40, 255)
+    outline = (150, 60, 10, 255)
+    inner = (255, 220, 110, 255)
+    frame_shapes = [
+        ([(8, 2), (12, 8), (10, 14), (6, 14), (4, 8)], [(8, 6), (10, 10), (9, 14), (7, 14), (6, 10)]),
+        ([(8, 1), (13, 8), (10, 14), (6, 14), (3, 8)], [(8, 5), (11, 10), (9, 14), (7, 14), (5, 10)]),
+        ([(7, 2), (12, 8), (11, 14), (5, 14), (4, 7)], [(7, 6), (10, 10), (9, 14), (6, 14), (6, 9)]),
+        ([(8, 1), (12, 7), (10, 14), (6, 14), (4, 8)], [(8, 5), (10, 9), (9, 14), (7, 14), (6, 10)]),
+    ]
+    frames = []
+    for outer_pts, inner_pts in frame_shapes:
+        img = new_canvas()
+        d = ImageDraw.Draw(img)
+        d.polygon(outer_pts, fill=outer, outline=outline)
+        d.polygon(inner_pts, fill=inner)
+        frames.append(img)
+    return frames
 
 
 def gen_ore_crushing_stone_base():
@@ -298,12 +310,22 @@ def gen_clay_kiln_body():
     return img
 
 
-def gen_clay_kiln_mouth():
-    img = new_canvas()
-    d = ImageDraw.Draw(img)
-    d.rectangle([0, 0, 15, 15], fill=(176, 110, 70, 255))
-    d.rectangle([3, 3, 12, 12], fill=(30, 22, 18, 255), outline=(90, 56, 34, 255))
-    return img
+def gen_clay_kiln_mouth_frames():
+    ember_colors = [
+        (60, 30, 16, 255),
+        (110, 50, 20, 255),
+        (150, 70, 24, 255),
+        (110, 50, 20, 255),
+    ]
+    frames = []
+    for ember in ember_colors:
+        img = new_canvas()
+        d = ImageDraw.Draw(img)
+        d.rectangle([0, 0, 15, 15], fill=(176, 110, 70, 255))
+        d.rectangle([3, 3, 12, 12], fill=(30, 22, 18, 255), outline=(90, 56, 34, 255))
+        d.rectangle([5, 6, 10, 10], fill=ember)
+        frames.append(img)
+    return frames
 
 
 def main():
@@ -347,7 +369,7 @@ def main():
     os.makedirs(os.path.join(BLOCK_DIR, "fire_pit"), exist_ok=True)
     save(gen_fire_pit_stone(), os.path.join(BLOCK_DIR, "fire_pit", "stone.png"))
     save(gen_fire_pit_logs(), os.path.join(BLOCK_DIR, "fire_pit", "logs.png"))
-    save(gen_fire_pit_flame(), os.path.join(BLOCK_DIR, "fire_pit", "flame.png"))
+    save_animated(gen_fire_pit_flame_frames(), os.path.join(BLOCK_DIR, "fire_pit", "flame.png"), frametime=4)
 
     os.makedirs(os.path.join(BLOCK_DIR, "ore_crushing_stone"), exist_ok=True)
     save(gen_ore_crushing_stone_base(), os.path.join(BLOCK_DIR, "ore_crushing_stone", "base.png"))
@@ -356,7 +378,7 @@ def main():
 
     os.makedirs(os.path.join(BLOCK_DIR, "clay_kiln"), exist_ok=True)
     save(gen_clay_kiln_body(), os.path.join(BLOCK_DIR, "clay_kiln", "body.png"))
-    save(gen_clay_kiln_mouth(), os.path.join(BLOCK_DIR, "clay_kiln", "mouth.png"))
+    save_animated(gen_clay_kiln_mouth_frames(), os.path.join(BLOCK_DIR, "clay_kiln", "mouth.png"), frametime=6)
 
 
 if __name__ == "__main__":

@@ -7,7 +7,7 @@ from model_viewer import render_model  # noqa: E402
 
 ASSETS_ROOT = os.path.join(os.path.dirname(__file__), "..", "src", "main", "resources")
 MODEL_DIR = os.path.join(ASSETS_ROOT, "assets", "dawnbound", "models", "block")
-PREVIEW_DIR = os.path.join(os.path.dirname(__file__), "model_previews")
+PREVIEW_DIR = os.path.join(os.path.dirname(__file__), "..", "..", "preview", "dawnbound")
 
 
 def main():
