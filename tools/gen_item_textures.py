@@ -328,6 +328,34 @@ def gen_clay_kiln_mouth_frames():
     return frames
 
 
+def gen_bloomery_body():
+    img = new_canvas()
+    d = ImageDraw.Draw(img)
+    d.rectangle([0, 0, 15, 15], fill=(96, 92, 88, 255))
+    d.rectangle([1, 1, 14, 14], outline=(64, 60, 56, 255), width=1)
+    for x, y in [(3, 3), (11, 4), (4, 11), (12, 12)]:
+        d.point((x, y), fill=(72, 68, 64, 255))
+    return img
+
+
+def gen_bloomery_vent_frames():
+    ember_colors = [
+        (50, 24, 14, 255),
+        (130, 50, 16, 255),
+        (190, 90, 24, 255),
+        (130, 50, 16, 255),
+    ]
+    frames = []
+    for ember in ember_colors:
+        img = new_canvas()
+        d = ImageDraw.Draw(img)
+        d.rectangle([0, 0, 15, 15], fill=(96, 92, 88, 255))
+        d.rectangle([4, 4, 11, 11], fill=(24, 18, 16, 255), outline=(60, 54, 50, 255))
+        d.rectangle([6, 7, 9, 9], fill=ember)
+        frames.append(img)
+    return frames
+
+
 def main():
     os.makedirs(ITEM_DIR, exist_ok=True)
     os.makedirs(BLOCK_DIR, exist_ok=True)
@@ -379,6 +407,10 @@ def main():
     os.makedirs(os.path.join(BLOCK_DIR, "clay_kiln"), exist_ok=True)
     save(gen_clay_kiln_body(), os.path.join(BLOCK_DIR, "clay_kiln", "body.png"))
     save_animated(gen_clay_kiln_mouth_frames(), os.path.join(BLOCK_DIR, "clay_kiln", "mouth.png"), frametime=6)
+
+    os.makedirs(os.path.join(BLOCK_DIR, "bloomery"), exist_ok=True)
+    save(gen_bloomery_body(), os.path.join(BLOCK_DIR, "bloomery", "body.png"))
+    save_animated(gen_bloomery_vent_frames(), os.path.join(BLOCK_DIR, "bloomery", "vent.png"), frametime=5)
 
 
 if __name__ == "__main__":

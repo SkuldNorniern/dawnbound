@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "SSS",
+    "SCS",
+    "SSS"
+  ],
+  "key": {
+    "S": "dawnbound:loose_stone",
+    "C": "dawnbound:clay_lump"
+  },
+  "result": {
+    "id": "dawnbound:bloomery",
+    "count": 1
+  }
+}

@@ -34,5 +34,6 @@
   "item.dawnbound.crushed_copper_ore": "Crushed Copper Ore",
   "item.dawnbound.crushed_iron_ore": "Crushed Iron Ore",
   "block.dawnbound.ore_crushing_stone": "Ore Crushing Stone",
-  "block.dawnbound.clay_kiln": "Clay Kiln"
+  "block.dawnbound.clay_kiln": "Clay Kiln",
+  "block.dawnbound.bloomery": "Bloomery"
 }

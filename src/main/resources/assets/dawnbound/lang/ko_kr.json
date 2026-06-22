@@ -34,5 +34,6 @@
   "item.dawnbound.crushed_copper_ore": "부서진 구리 광석",
   "item.dawnbound.crushed_iron_ore": "부서진 철 광석",
   "block.dawnbound.ore_crushing_stone": "광석 분쇄석",
-  "block.dawnbound.clay_kiln": "점토 가마"
+  "block.dawnbound.clay_kiln": "점토 가마",
+  "block.dawnbound.bloomery": "제철로"
 }

@@ -1,5 +1,6 @@
 package com.nornity.dawnbound.registry;
 
+import com.nornity.dawnbound.block.BloomeryBlock;
 import com.nornity.dawnbound.block.ClayKilnBlock;
 import com.nornity.dawnbound.block.FirePitBlock;
 import com.nornity.dawnbound.block.FlatStoneWorkSurfaceBlock;
@@ -76,5 +77,15 @@ public class ModBlocks {
             .sound(SoundType.STONE)
             .strength(2.5f, 4.0f)
             .noOcclusion())
+    );
+
+    public static final DeferredBlock<BloomeryBlock> BLOOMERY = BLOCKS.register(
+        "bloomery",
+        id -> new BloomeryBlock(BlockBehaviour.Properties.of()
+            .setId(ResourceKey.create(Registries.BLOCK, id))
+            .mapColor(MapColor.STONE)
+            .sound(SoundType.STONE)
+            .strength(3.5f, 5.0f)
+            .requiresCorrectToolForDrops())
     );
 }
