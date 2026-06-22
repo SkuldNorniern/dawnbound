@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:match_tool",
+                  "predicate": { "items": "#minecraft:axes" }
+                }
+              ],
+              "name": "dawnbound:rough_planks",
+              "functions": [
+                { "function": "minecraft:set_count", "count": 2 }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:dark_oak_log"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
