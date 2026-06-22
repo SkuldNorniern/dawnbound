@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_table",
+  "table": "dawnbound:inject/clay_lump_from_clay",
+  "conditions": [
+    {
+      "condition": "neoforge:loot_table_id",
+      "loot_table_id": "minecraft:blocks/clay"
+    }
+  ]
+}

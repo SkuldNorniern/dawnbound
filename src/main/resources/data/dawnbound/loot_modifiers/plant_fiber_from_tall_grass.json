@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_table",
+  "table": "dawnbound:inject/plant_fiber_from_grass",
+  "conditions": [
+    {
+      "condition": "neoforge:loot_table_id",
+      "loot_table_id": "minecraft:blocks/tall_grass"
+    }
+  ]
+}
