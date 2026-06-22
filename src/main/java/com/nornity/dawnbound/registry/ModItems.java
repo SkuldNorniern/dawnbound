@@ -1,5 +1,6 @@
 package com.nornity.dawnbound.registry;
 
+import com.nornity.dawnbound.tool.PrimitiveToolMaterials;
 import net.minecraft.world.item.Item;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -21,4 +22,15 @@ public class ModItems {
         ITEMS.registerSimpleItem("clay_lump");
     public static final DeferredItem<Item> BARK =
         ITEMS.registerSimpleItem("bark");
+    public static final DeferredItem<Item> ROUGH_PLANKS =
+        ITEMS.registerSimpleItem("rough_planks");
+
+    public static final DeferredItem<Item> FLINT_KNIFE =
+        ITEMS.registerSimpleItem("flint_knife", props -> props.durability(60));
+    public static final DeferredItem<Item> STONE_HATCHET =
+        ITEMS.registerItem("stone_hatchet", Item::new,
+            props -> props.axe(PrimitiveToolMaterials.PRIMITIVE, 5.0F, -3.2F));
+    public static final DeferredItem<Item> DIGGING_STICK =
+        ITEMS.registerItem("digging_stick", Item::new,
+            props -> props.shovel(PrimitiveToolMaterials.PRIMITIVE, 1.5F, -3.0F));
 }

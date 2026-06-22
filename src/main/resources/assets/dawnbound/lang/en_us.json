@@ -7,7 +7,13 @@
   "item.dawnbound.loose_stone": "Loose Stone",
   "item.dawnbound.clay_lump": "Clay Lump",
   "item.dawnbound.bark": "Bark",
+  "item.dawnbound.rough_planks": "Rough Planks",
+  "item.dawnbound.flint_knife": "Flint Knife",
+  "item.dawnbound.stone_hatchet": "Stone Hatchet",
+  "item.dawnbound.digging_stick": "Digging Stick",
   "item.dawnbound.plant_fiber.tooltip": "Twist into cordage for primitive tools.",
   "item.dawnbound.cordage.tooltip": "Used to bind crude tools together.",
-  "item.dawnbound.sharp_flint.tooltip": "A cutting edge for your first knife."
+  "item.dawnbound.sharp_flint.tooltip": "A cutting edge for your first knife.",
+  "item.dawnbound.stone_hatchet.tooltip": "Can harvest logs, slowly.",
+  "dawnbound.message.requires_hatchet": "You need a hatchet or axe for this."
 }

@@ -7,7 +7,13 @@
   "item.dawnbound.loose_stone": "잔돌",
   "item.dawnbound.clay_lump": "점토 덩어리",
   "item.dawnbound.bark": "나무껍질",
+  "item.dawnbound.rough_planks": "거친 널빤지",
+  "item.dawnbound.flint_knife": "부싯돌 칼",
+  "item.dawnbound.stone_hatchet": "돌 손도끼",
+  "item.dawnbound.digging_stick": "굴착 막대",
   "item.dawnbound.plant_fiber.tooltip": "원시 도구를 만들기 위해 노끈으로 꼴 수 있습니다.",
   "item.dawnbound.cordage.tooltip": "조잡한 도구를 묶는 데 사용됩니다.",
-  "item.dawnbound.sharp_flint.tooltip": "첫 칼날을 위한 날카로운 모서리입니다."
+  "item.dawnbound.sharp_flint.tooltip": "첫 칼날을 위한 날카로운 모서리입니다.",
+  "item.dawnbound.stone_hatchet.tooltip": "통나무를 천천히 채집할 수 있습니다.",
+  "dawnbound.message.requires_hatchet": "손도끼나 도끼가 필요합니다."
 }

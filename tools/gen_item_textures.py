@@ -73,6 +73,39 @@ def gen_bark():
     return img
 
 
+def gen_rough_planks():
+    img = new_canvas()
+    d = ImageDraw.Draw(img)
+    d.rectangle([2, 3, 13, 12], fill=(150, 112, 68, 255), outline=OUTLINE)
+    for x in (5, 9):
+        d.line([(x, 3), (x, 12)], fill=(120, 88, 50, 255))
+    return img
+
+
+def gen_flint_knife():
+    img = new_canvas()
+    d = ImageDraw.Draw(img)
+    d.line([(4, 13), (10, 7)], fill=(150, 110, 60, 255), width=2)
+    d.polygon([(9, 8), (13, 2), (12, 5), (8, 9)], fill=(70, 70, 78, 255), outline=OUTLINE)
+    return img
+
+
+def gen_stone_hatchet():
+    img = new_canvas()
+    d = ImageDraw.Draw(img)
+    d.line([(4, 13), (10, 6)], fill=(150, 110, 60, 255), width=2)
+    d.polygon([(9, 7), (14, 3), (13, 8), (9, 11)], fill=(120, 116, 110, 255), outline=OUTLINE)
+    return img
+
+
+def gen_digging_stick():
+    img = new_canvas()
+    d = ImageDraw.Draw(img)
+    d.line([(4, 14), (12, 2)], fill=(150, 110, 60, 255), width=2)
+    d.polygon([(11, 4), (14, 2), (12, 5)], fill=(120, 116, 110, 255), outline=OUTLINE)
+    return img
+
+
 def main():
     os.makedirs(ITEM_DIR, exist_ok=True)
 
@@ -84,6 +117,10 @@ def main():
         "loose_stone": gen_loose_stone,
         "clay_lump": gen_clay_lump,
         "bark": gen_bark,
+        "rough_planks": gen_rough_planks,
+        "flint_knife": gen_flint_knife,
+        "stone_hatchet": gen_stone_hatchet,
+        "digging_stick": gen_digging_stick,
     }
     for name, gen in items.items():
         save(gen(), os.path.join(ITEM_DIR, f"{name}.png"))
