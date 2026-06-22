@@ -15,5 +15,8 @@
   "item.dawnbound.cordage.tooltip": "조잡한 도구를 묶는 데 사용됩니다.",
   "item.dawnbound.sharp_flint.tooltip": "첫 칼날을 위한 날카로운 모서리입니다.",
   "item.dawnbound.stone_hatchet.tooltip": "통나무를 천천히 채집할 수 있습니다.",
-  "dawnbound.message.requires_hatchet": "손도끼나 도끼가 필요합니다."
+  "dawnbound.message.requires_hatchet": "손도끼나 도끼가 필요합니다.",
+  "block.dawnbound.primitive_work_mat": "원시 작업 깔개",
+  "block.dawnbound.flat_stone_work_surface": "평평한 돌 작업대",
+  "block.dawnbound.primitive_work_stump": "원시 작업 그루터기"
 }

@@ -1,6 +1,7 @@
 package com.nornity.dawnbound.registry;
 
 import com.nornity.dawnbound.tool.PrimitiveToolMaterials;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -33,4 +34,11 @@ public class ModItems {
     public static final DeferredItem<Item> DIGGING_STICK =
         ITEMS.registerItem("digging_stick", Item::new,
             props -> props.shovel(PrimitiveToolMaterials.PRIMITIVE, 1.5F, -3.0F));
+
+    public static final DeferredItem<BlockItem> PRIMITIVE_WORK_MAT =
+        ITEMS.registerSimpleBlockItem(ModBlocks.PRIMITIVE_WORK_MAT);
+    public static final DeferredItem<BlockItem> FLAT_STONE_WORK_SURFACE =
+        ITEMS.registerSimpleBlockItem(ModBlocks.FLAT_STONE_WORK_SURFACE);
+    public static final DeferredItem<BlockItem> PRIMITIVE_WORK_STUMP =
+        ITEMS.registerSimpleBlockItem(ModBlocks.PRIMITIVE_WORK_STUMP);
 }

@@ -10,6 +10,9 @@ from pixel_art import new_canvas, save  # noqa: E402
 ITEM_DIR = os.path.join(
     os.path.dirname(__file__), "..", "src", "main", "resources", "assets", "dawnbound", "textures", "item"
 )
+BLOCK_DIR = os.path.join(
+    os.path.dirname(__file__), "..", "src", "main", "resources", "assets", "dawnbound", "textures", "block"
+)
 
 OUTLINE = (40, 30, 20, 255)
 
@@ -106,8 +109,49 @@ def gen_digging_stick():
     return img
 
 
+def gen_work_mat():
+    img = new_canvas()
+    d = ImageDraw.Draw(img)
+    d.rectangle([0, 0, 15, 15], fill=(150, 122, 78, 255))
+    for y in range(0, 16, 3):
+        d.line([(0, y), (15, y)], fill=(120, 95, 55, 255))
+    for x in range(0, 16, 3):
+        d.line([(x, 0), (x, 15)], fill=(170, 142, 95, 255))
+    return img
+
+
+def gen_stone_work_surface():
+    img = new_canvas()
+    d = ImageDraw.Draw(img)
+    d.rectangle([0, 0, 15, 15], fill=(118, 114, 108, 255))
+    d.line([(2, 3), (7, 6), (5, 11)], fill=(90, 86, 80, 255))
+    d.line([(9, 2), (11, 8), (14, 12)], fill=(90, 86, 80, 255))
+    d.line([(3, 13), (8, 10), (13, 14)], fill=(140, 136, 128, 255))
+    return img
+
+
+def gen_work_stump_bark():
+    img = new_canvas()
+    d = ImageDraw.Draw(img)
+    d.rectangle([0, 0, 15, 15], fill=(92, 64, 40, 255))
+    for x in (2, 5, 8, 11, 14):
+        d.line([(x, 0), (x, 15)], fill=(70, 48, 30, 255))
+    return img
+
+
+def gen_work_stump_top():
+    img = new_canvas()
+    d = ImageDraw.Draw(img)
+    d.rectangle([0, 0, 15, 15], fill=(150, 112, 68, 255))
+    for r in (6, 4, 2):
+        d.ellipse([7 - r, 7 - r, 7 + r, 7 + r], outline=(120, 88, 50, 255))
+    d.line([(3, 4), (10, 11)], fill=(80, 56, 32, 255), width=1)
+    return img
+
+
 def main():
     os.makedirs(ITEM_DIR, exist_ok=True)
+    os.makedirs(BLOCK_DIR, exist_ok=True)
 
     items = {
         "plant_fiber": gen_plant_fiber,
@@ -124,6 +168,11 @@ def main():
     }
     for name, gen in items.items():
         save(gen(), os.path.join(ITEM_DIR, f"{name}.png"))
+
+    save(gen_work_mat(), os.path.join(BLOCK_DIR, "primitive_work_mat.png"))
+    save(gen_stone_work_surface(), os.path.join(BLOCK_DIR, "flat_stone_work_surface.png"))
+    save(gen_work_stump_bark(), os.path.join(BLOCK_DIR, "primitive_work_stump_bark.png"))
+    save(gen_work_stump_top(), os.path.join(BLOCK_DIR, "primitive_work_stump_top.png"))
 
 
 if __name__ == "__main__":

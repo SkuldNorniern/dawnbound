@@ -15,5 +15,8 @@
   "item.dawnbound.cordage.tooltip": "Used to bind crude tools together.",
   "item.dawnbound.sharp_flint.tooltip": "A cutting edge for your first knife.",
   "item.dawnbound.stone_hatchet.tooltip": "Can harvest logs, slowly.",
-  "dawnbound.message.requires_hatchet": "You need a hatchet or axe for this."
+  "dawnbound.message.requires_hatchet": "You need a hatchet or axe for this.",
+  "block.dawnbound.primitive_work_mat": "Primitive Work Mat",
+  "block.dawnbound.flat_stone_work_surface": "Flat Stone Work Surface",
+  "block.dawnbound.primitive_work_stump": "Primitive Work Stump"
 }

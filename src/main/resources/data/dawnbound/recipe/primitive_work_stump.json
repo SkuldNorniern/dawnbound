@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "dawnbound:cordage",
+    "#minecraft:logs",
+    "#minecraft:logs",
+    "#minecraft:logs"
+  ],
+  "result": {
+    "id": "dawnbound:primitive_work_stump",
+    "count": 1
+  }
+}

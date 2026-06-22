@@ -1,0 +1,20 @@
+{
+  "textures": {
+    "surface": "dawnbound:block/flat_stone_work_surface",
+    "particle": "dawnbound:block/flat_stone_work_surface"
+  },
+  "elements": [
+    {
+      "from": [0, 0, 0],
+      "to": [16, 3, 16],
+      "faces": {
+        "north": { "uv": [0, 0, 16, 16], "texture": "#surface" },
+        "south": { "uv": [0, 0, 16, 16], "texture": "#surface" },
+        "east": { "uv": [0, 0, 16, 16], "texture": "#surface" },
+        "west": { "uv": [0, 0, 16, 16], "texture": "#surface" },
+        "up": { "uv": [0, 0, 16, 16], "texture": "#surface" },
+        "down": { "uv": [0, 0, 16, 16], "texture": "#surface" }
+      }
+    }
+  ]
+}

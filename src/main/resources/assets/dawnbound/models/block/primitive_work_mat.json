@@ -1,0 +1,20 @@
+{
+  "textures": {
+    "mat": "dawnbound:block/primitive_work_mat",
+    "particle": "dawnbound:block/primitive_work_mat"
+  },
+  "elements": [
+    {
+      "from": [0, 0, 0],
+      "to": [16, 1, 16],
+      "faces": {
+        "north": { "uv": [0, 0, 16, 16], "texture": "#mat" },
+        "south": { "uv": [0, 0, 16, 16], "texture": "#mat" },
+        "east": { "uv": [0, 0, 16, 16], "texture": "#mat" },
+        "west": { "uv": [0, 0, 16, 16], "texture": "#mat" },
+        "up": { "uv": [0, 0, 16, 16], "texture": "#mat" },
+        "down": { "uv": [0, 0, 16, 16], "texture": "#mat" }
+      }
+    }
+  ]
+}

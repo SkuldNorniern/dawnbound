@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "dawnbound:cordage",
+    "dawnbound:plant_fiber",
+    "dawnbound:plant_fiber",
+    "dawnbound:plant_fiber"
+  ],
+  "result": {
+    "id": "dawnbound:primitive_work_mat",
+    "count": 1
+  }
+}

@@ -3,6 +3,7 @@ package com.nornity.dawnbound;
 import com.mojang.logging.LogUtils;
 import com.nornity.dawnbound.config.Config;
 import com.nornity.dawnbound.event.HandRestrictionEvents;
+import com.nornity.dawnbound.registry.ModBlocks;
 import com.nornity.dawnbound.registry.ModItems;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
@@ -42,11 +43,15 @@ public class Dawnbound {
                 output.accept(ModItems.FLINT_KNIFE.get());
                 output.accept(ModItems.STONE_HATCHET.get());
                 output.accept(ModItems.DIGGING_STICK.get());
+                output.accept(ModItems.PRIMITIVE_WORK_MAT.get());
+                output.accept(ModItems.FLAT_STONE_WORK_SURFACE.get());
+                output.accept(ModItems.PRIMITIVE_WORK_STUMP.get());
             })
             .build());
 
     public Dawnbound(IEventBus modEventBus, ModContainer modContainer) {
         ModItems.ITEMS.register(modEventBus);
+        ModBlocks.BLOCKS.register(modEventBus);
         CREATIVE_MODE_TABS.register(modEventBus);
         modContainer.registerConfig(ModConfig.Type.SERVER, Config.SERVER_SPEC);
         NeoForge.EVENT_BUS.register(HandRestrictionEvents.class);

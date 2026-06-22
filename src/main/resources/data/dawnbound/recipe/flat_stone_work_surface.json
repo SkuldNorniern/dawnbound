@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "dawnbound:loose_stone",
+    "dawnbound:loose_stone",
+    "dawnbound:sharp_stone",
+    "dawnbound:sharp_stone"
+  ],
+  "result": {
+    "id": "dawnbound:flat_stone_work_surface",
+    "count": 1
+  }
+}
