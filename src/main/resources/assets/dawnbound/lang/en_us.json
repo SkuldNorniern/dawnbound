@@ -1,3 +1,13 @@
 {
-  "itemGroup.dawnbound": "Dawnbound"
+  "itemGroup.dawnbound": "Dawnbound",
+  "item.dawnbound.plant_fiber": "Plant Fiber",
+  "item.dawnbound.cordage": "Cordage",
+  "item.dawnbound.sharp_flint": "Sharp Flint",
+  "item.dawnbound.sharp_stone": "Sharp Stone",
+  "item.dawnbound.loose_stone": "Loose Stone",
+  "item.dawnbound.clay_lump": "Clay Lump",
+  "item.dawnbound.bark": "Bark",
+  "item.dawnbound.plant_fiber.tooltip": "Twist into cordage for primitive tools.",
+  "item.dawnbound.cordage.tooltip": "Used to bind crude tools together.",
+  "item.dawnbound.sharp_flint.tooltip": "A cutting edge for your first knife."
 }

@@ -1,3 +1,13 @@
 {
-  "itemGroup.dawnbound": "던바운드"
+  "itemGroup.dawnbound": "던바운드",
+  "item.dawnbound.plant_fiber": "식물 섬유",
+  "item.dawnbound.cordage": "노끈",
+  "item.dawnbound.sharp_flint": "날카로운 부싯돌",
+  "item.dawnbound.sharp_stone": "날카로운 돌",
+  "item.dawnbound.loose_stone": "잔돌",
+  "item.dawnbound.clay_lump": "점토 덩어리",
+  "item.dawnbound.bark": "나무껍질",
+  "item.dawnbound.plant_fiber.tooltip": "원시 도구를 만들기 위해 노끈으로 꼴 수 있습니다.",
+  "item.dawnbound.cordage.tooltip": "조잡한 도구를 묶는 데 사용됩니다.",
+  "item.dawnbound.sharp_flint.tooltip": "첫 칼날을 위한 날카로운 모서리입니다."
 }
