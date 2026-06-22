@@ -1,5 +1,6 @@
 package com.nornity.dawnbound.registry;
 
+import com.nornity.dawnbound.block.FirePitBlock;
 import com.nornity.dawnbound.block.FlatStoneWorkSurfaceBlock;
 import com.nornity.dawnbound.block.PrimitiveWorkStumpBlock;
 import net.minecraft.core.registries.Registries;
@@ -41,6 +42,17 @@ public class ModBlocks {
             .mapColor(MapColor.WOOD)
             .sound(SoundType.WOOD)
             .strength(2.0f, 2.5f)
+            .noOcclusion())
+    );
+
+    public static final DeferredBlock<FirePitBlock> FIRE_PIT = BLOCKS.register(
+        "fire_pit",
+        id -> new FirePitBlock(BlockBehaviour.Properties.of()
+            .setId(ResourceKey.create(Registries.BLOCK, id))
+            .mapColor(MapColor.STONE)
+            .sound(SoundType.STONE)
+            .strength(1.0f, 2.0f)
+            .lightLevel(state -> 7)
             .noOcclusion())
     );
 }

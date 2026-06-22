@@ -57,4 +57,6 @@ public class ModItems {
         ITEMS.registerSimpleBlockItem(ModBlocks.FLAT_STONE_WORK_SURFACE);
     public static final DeferredItem<BlockItem> PRIMITIVE_WORK_STUMP =
         ITEMS.registerSimpleBlockItem(ModBlocks.PRIMITIVE_WORK_STUMP);
+    public static final DeferredItem<BlockItem> FIRE_PIT =
+        ITEMS.registerSimpleBlockItem(ModBlocks.FIRE_PIT);
 }

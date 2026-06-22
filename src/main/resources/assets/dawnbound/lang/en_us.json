@@ -29,5 +29,6 @@
   "item.dawnbound.saw": "Saw",
   "item.dawnbound.saw.tooltip": "Craft with logs to make planks; loses durability.",
   "item.dawnbound.bound_saw": "Bound Saw",
-  "item.dawnbound.bound_saw.tooltip": "A sturdier saw with a bound stone edge."
+  "item.dawnbound.bound_saw.tooltip": "A sturdier saw with a bound stone edge.",
+  "block.dawnbound.fire_pit": "Fire Pit"
 }

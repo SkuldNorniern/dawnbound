@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "dawnbound:loose_stone",
+    "dawnbound:loose_stone",
+    "dawnbound:loose_stone",
+    "dawnbound:loose_stone"
+  ],
+  "result": {
+    "id": "dawnbound:fire_pit",
+    "count": 1
+  }
+}

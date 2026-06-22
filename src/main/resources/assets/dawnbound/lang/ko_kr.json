@@ -29,5 +29,6 @@
   "item.dawnbound.saw": "톱",
   "item.dawnbound.saw.tooltip": "통나무와 함께 사용해 널빤지를 만듭니다. 내구도가 소모됩니다.",
   "item.dawnbound.bound_saw": "결속된 톱",
-  "item.dawnbound.bound_saw.tooltip": "결속된 돌촉을 사용한 더 튼튼한 톱입니다."
+  "item.dawnbound.bound_saw.tooltip": "결속된 돌촉을 사용한 더 튼튼한 톱입니다.",
+  "block.dawnbound.fire_pit": "화로"
 }

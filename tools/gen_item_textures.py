@@ -220,6 +220,32 @@ def gen_work_stump_top():
     return img
 
 
+def gen_fire_pit_stone():
+    img = new_canvas()
+    d = ImageDraw.Draw(img)
+    d.rectangle([0, 0, 15, 15], fill=(118, 114, 108, 255))
+    d.ellipse([2, 2, 13, 13], outline=(90, 86, 80, 255), width=2)
+    d.ellipse([5, 5, 10, 10], fill=(40, 28, 20, 255))
+    return img
+
+
+def gen_fire_pit_logs():
+    img = new_canvas()
+    d = ImageDraw.Draw(img)
+    d.rectangle([0, 0, 15, 15], fill=(40, 28, 20, 255))
+    d.line([(2, 2), (13, 13)], fill=(92, 64, 40, 255), width=2)
+    d.line([(2, 13), (13, 2)], fill=(70, 48, 30, 255), width=2)
+    return img
+
+
+def gen_fire_pit_flame():
+    img = new_canvas()
+    d = ImageDraw.Draw(img)
+    d.polygon([(8, 2), (12, 8), (10, 14), (6, 14), (4, 8)], fill=(235, 140, 40, 255), outline=(150, 60, 10, 255))
+    d.polygon([(8, 6), (10, 10), (9, 14), (7, 14), (6, 10)], fill=(255, 220, 110, 255))
+    return img
+
+
 def main():
     os.makedirs(ITEM_DIR, exist_ok=True)
     os.makedirs(BLOCK_DIR, exist_ok=True)
@@ -255,6 +281,11 @@ def main():
     os.makedirs(os.path.join(BLOCK_DIR, "primitive_work_stump"), exist_ok=True)
     save(gen_work_stump_bark(), os.path.join(BLOCK_DIR, "primitive_work_stump", "bark.png"))
     save(gen_work_stump_top(), os.path.join(BLOCK_DIR, "primitive_work_stump", "top.png"))
+
+    os.makedirs(os.path.join(BLOCK_DIR, "fire_pit"), exist_ok=True)
+    save(gen_fire_pit_stone(), os.path.join(BLOCK_DIR, "fire_pit", "stone.png"))
+    save(gen_fire_pit_logs(), os.path.join(BLOCK_DIR, "fire_pit", "logs.png"))
+    save(gen_fire_pit_flame(), os.path.join(BLOCK_DIR, "fire_pit", "flame.png"))
 
 
 if __name__ == "__main__":
