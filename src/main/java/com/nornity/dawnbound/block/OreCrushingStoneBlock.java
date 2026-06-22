@@ -14,7 +14,9 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 
 public class OreCrushingStoneBlock extends Block {
-    private static final int CRUSHED_YIELD = 2;
+    // 1:1 - crushing is a required unlock step for the Kiln/Bloomery, not a free yield bonus.
+    // The yield improvement only pays off after the full crush-then-smelt chain completes.
+    private static final int CRUSHED_YIELD = 1;
 
     public OreCrushingStoneBlock(BlockBehaviour.Properties properties) {
         super(properties);

@@ -13,7 +13,10 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 
 public class BloomeryBlock extends Block {
+    // Iron needs more heat than copper, so it costs more charcoal per craft - a real cost,
+    // not a duplication exploit, since crushing itself (Ore Crushing Stone) is 1:1.
     private static final int CHARCOAL_COST = 2;
+    private static final int INGOT_YIELD = 2;
 
     public BloomeryBlock(BlockBehaviour.Properties properties) {
         super(properties);
@@ -31,7 +34,7 @@ public class BloomeryBlock extends Block {
         if (held.is(ModItems.CRUSHED_IRON_ORE.get()) && offhand.is(Items.CHARCOAL) && offhand.getCount() >= CHARCOAL_COST) {
             held.shrink(1);
             offhand.shrink(CHARCOAL_COST);
-            ItemStack ingot = new ItemStack(Items.IRON_INGOT);
+            ItemStack ingot = new ItemStack(Items.IRON_INGOT, INGOT_YIELD);
             if (!player.getInventory().add(ingot)) {
                 player.drop(ingot, false);
             }
