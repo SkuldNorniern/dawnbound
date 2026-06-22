@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    "dawnbound:sharp_flint",
+    "dawnbound:sharp_flint",
+    "minecraft:stick",
+    "dawnbound:cordage"
+  ],
+  "result": {
+    "id": "dawnbound:saw",
+    "count": 1
+  }
+}

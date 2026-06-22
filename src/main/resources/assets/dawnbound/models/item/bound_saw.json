@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "dawnbound:item/tools/bound_saw"
+  }
+}

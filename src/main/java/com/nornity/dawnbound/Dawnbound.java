@@ -52,6 +52,8 @@ public class Dawnbound {
                 output.accept(ModItems.RAWHIDE_CORD.get());
                 output.accept(ModItems.CRUDE_HANDLE.get());
                 output.accept(ModItems.TOOL_BINDING.get());
+                output.accept(ModItems.SAW.get());
+                output.accept(ModItems.BOUND_SAW.get());
             })
             .build());
 

@@ -109,6 +109,29 @@ def gen_digging_stick():
     return img
 
 
+def gen_saw():
+    img = new_canvas()
+    d = ImageDraw.Draw(img)
+    d.line([(4, 13), (10, 7)], fill=(150, 110, 60, 255), width=2)
+    d.polygon([(9, 8), (14, 3), (13, 6), (8, 9)], fill=(80, 80, 88, 255), outline=OUTLINE)
+    for i in range(3):
+        x, y = 9 + i, 7 - i
+        d.point((x, y), fill=(160, 160, 168, 255))
+    return img
+
+
+def gen_bound_saw():
+    img = new_canvas()
+    d = ImageDraw.Draw(img)
+    d.line([(4, 13), (10, 7)], fill=(150, 110, 60, 255), width=2)
+    d.line([(5, 11), (9, 9)], fill=(195, 165, 120, 255), width=1)
+    d.polygon([(9, 8), (14, 3), (13, 6), (8, 9)], fill=(140, 136, 130, 255), outline=OUTLINE)
+    for i in range(3):
+        x, y = 9 + i, 7 - i
+        d.point((x, y), fill=(200, 198, 192, 255))
+    return img
+
+
 def gen_knapped_stone_head():
     img = new_canvas()
     d = ImageDraw.Draw(img)
@@ -213,6 +236,8 @@ def main():
         "tools/flint_knife": gen_flint_knife,
         "tools/stone_hatchet": gen_stone_hatchet,
         "tools/digging_stick": gen_digging_stick,
+        "tools/saw": gen_saw,
+        "tools/bound_saw": gen_bound_saw,
         "materials/knapped_stone_head": gen_knapped_stone_head,
         "materials/bound_stone_head": gen_bound_stone_head,
         "materials/resin": gen_resin,

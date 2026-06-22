@@ -46,6 +46,10 @@ public class ModItems {
     public static final DeferredItem<Item> DIGGING_STICK =
         ITEMS.registerItem("digging_stick", Item::new,
             props -> props.shovel(PrimitiveToolMaterials.PRIMITIVE, 1.5F, -3.0F));
+    public static final DeferredItem<Item> SAW =
+        ITEMS.registerSimpleItem("saw", props -> props.durability(30));
+    public static final DeferredItem<Item> BOUND_SAW =
+        ITEMS.registerSimpleItem("bound_saw", props -> props.durability(80));
 
     public static final DeferredItem<BlockItem> PRIMITIVE_WORK_MAT =
         ITEMS.registerSimpleBlockItem(ModBlocks.PRIMITIVE_WORK_MAT);

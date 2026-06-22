@@ -25,5 +25,9 @@
   "item.dawnbound.resin": "Resin",
   "item.dawnbound.rawhide_cord": "Rawhide Cord",
   "item.dawnbound.crude_handle": "Crude Handle",
-  "item.dawnbound.tool_binding": "Tool Binding"
+  "item.dawnbound.tool_binding": "Tool Binding",
+  "item.dawnbound.saw": "Saw",
+  "item.dawnbound.saw.tooltip": "Craft with logs to make planks; loses durability.",
+  "item.dawnbound.bound_saw": "Bound Saw",
+  "item.dawnbound.bound_saw.tooltip": "A sturdier saw with a bound stone edge."
 }

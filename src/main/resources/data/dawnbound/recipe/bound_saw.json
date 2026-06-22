@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    "dawnbound:bound_stone_head",
+    "dawnbound:bound_stone_head",
+    "dawnbound:crude_handle",
+    "dawnbound:tool_binding"
+  ],
+  "result": {
+    "id": "dawnbound:bound_saw",
+    "count": 1
+  }
+}
