@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    "minecraft:stick",
+    "dawnbound:sharp_stone"
+  ],
+  "result": {
+    "id": "dawnbound:digging_stick",
+    "count": 1
+  }
+}

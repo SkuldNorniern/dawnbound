@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    "dawnbound:sharp_stone",
+    "minecraft:stick",
+    "dawnbound:cordage"
+  ],
+  "result": {
+    "id": "dawnbound:stone_hatchet",
+    "count": 1
+  }
+}

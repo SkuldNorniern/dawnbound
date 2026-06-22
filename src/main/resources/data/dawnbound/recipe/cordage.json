@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "dawnbound:plant_fiber",
+    "dawnbound:plant_fiber"
+  ],
+  "result": {
+    "id": "dawnbound:cordage",
+    "count": 1
+  }
+}
