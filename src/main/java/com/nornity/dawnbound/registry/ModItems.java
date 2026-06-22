@@ -37,6 +37,10 @@ public class ModItems {
         ITEMS.registerSimpleItem("crude_handle");
     public static final DeferredItem<Item> TOOL_BINDING =
         ITEMS.registerSimpleItem("tool_binding");
+    public static final DeferredItem<Item> CRUSHED_COPPER_ORE =
+        ITEMS.registerSimpleItem("crushed_copper_ore");
+    public static final DeferredItem<Item> CRUSHED_IRON_ORE =
+        ITEMS.registerSimpleItem("crushed_iron_ore");
 
     public static final DeferredItem<Item> FLINT_KNIFE =
         ITEMS.registerSimpleItem("flint_knife", props -> props.durability(60));
@@ -59,4 +63,8 @@ public class ModItems {
         ITEMS.registerSimpleBlockItem(ModBlocks.PRIMITIVE_WORK_STUMP);
     public static final DeferredItem<BlockItem> FIRE_PIT =
         ITEMS.registerSimpleBlockItem(ModBlocks.FIRE_PIT);
+    public static final DeferredItem<BlockItem> ORE_CRUSHING_STONE =
+        ITEMS.registerSimpleBlockItem(ModBlocks.ORE_CRUSHING_STONE);
+    public static final DeferredItem<BlockItem> CLAY_KILN =
+        ITEMS.registerSimpleBlockItem(ModBlocks.CLAY_KILN);
 }

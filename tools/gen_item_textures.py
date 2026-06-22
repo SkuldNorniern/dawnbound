@@ -180,6 +180,26 @@ def gen_tool_binding():
     return img
 
 
+def gen_crushed_copper_ore():
+    img = new_canvas()
+    d = ImageDraw.Draw(img)
+    d.polygon([(7, 3), (12, 6), (11, 12), (5, 13), (3, 7)], fill=(120, 116, 110, 255), outline=OUTLINE)
+    for x, y in [(6, 6), (9, 8), (7, 10)]:
+        d.point((x, y), fill=(200, 120, 70, 255))
+        d.point((x + 1, y), fill=(230, 150, 90, 255))
+    return img
+
+
+def gen_crushed_iron_ore():
+    img = new_canvas()
+    d = ImageDraw.Draw(img)
+    d.polygon([(7, 3), (12, 6), (11, 12), (5, 13), (3, 7)], fill=(120, 116, 110, 255), outline=OUTLINE)
+    for x, y in [(6, 6), (9, 8), (7, 10)]:
+        d.point((x, y), fill=(216, 178, 160, 255))
+        d.point((x + 1, y), fill=(230, 200, 180, 255))
+    return img
+
+
 def gen_work_mat():
     img = new_canvas()
     d = ImageDraw.Draw(img)
@@ -246,6 +266,46 @@ def gen_fire_pit_flame():
     return img
 
 
+def gen_ore_crushing_stone_base():
+    img = new_canvas()
+    d = ImageDraw.Draw(img)
+    d.rectangle([0, 0, 15, 15], fill=(118, 114, 108, 255))
+    d.rectangle([1, 1, 14, 14], outline=(90, 86, 80, 255), width=1)
+    return img
+
+
+def gen_ore_crushing_stone_bowl():
+    img = new_canvas()
+    d = ImageDraw.Draw(img)
+    d.rectangle([0, 0, 15, 15], fill=(100, 96, 90, 255))
+    d.ellipse([3, 3, 12, 12], fill=(60, 56, 52, 255), outline=(40, 36, 32, 255))
+    return img
+
+
+def gen_ore_crushing_stone_pestle():
+    img = new_canvas()
+    d = ImageDraw.Draw(img)
+    d.rectangle([0, 0, 15, 15], fill=(128, 124, 118, 255))
+    d.rectangle([1, 1, 14, 14], outline=(100, 96, 90, 255), width=1)
+    return img
+
+
+def gen_clay_kiln_body():
+    img = new_canvas()
+    d = ImageDraw.Draw(img)
+    d.rectangle([0, 0, 15, 15], fill=(176, 110, 70, 255))
+    d.rectangle([1, 1, 14, 14], outline=(140, 84, 50, 255), width=1)
+    return img
+
+
+def gen_clay_kiln_mouth():
+    img = new_canvas()
+    d = ImageDraw.Draw(img)
+    d.rectangle([0, 0, 15, 15], fill=(176, 110, 70, 255))
+    d.rectangle([3, 3, 12, 12], fill=(30, 22, 18, 255), outline=(90, 56, 34, 255))
+    return img
+
+
 def main():
     os.makedirs(ITEM_DIR, exist_ok=True)
     os.makedirs(BLOCK_DIR, exist_ok=True)
@@ -270,6 +330,8 @@ def main():
         "materials/rawhide_cord": gen_rawhide_cord,
         "materials/crude_handle": gen_crude_handle,
         "materials/tool_binding": gen_tool_binding,
+        "materials/crushed_copper_ore": gen_crushed_copper_ore,
+        "materials/crushed_iron_ore": gen_crushed_iron_ore,
     }
     for name, gen in items.items():
         out_path = os.path.join(ITEM_DIR, f"{name}.png")
@@ -286,6 +348,15 @@ def main():
     save(gen_fire_pit_stone(), os.path.join(BLOCK_DIR, "fire_pit", "stone.png"))
     save(gen_fire_pit_logs(), os.path.join(BLOCK_DIR, "fire_pit", "logs.png"))
     save(gen_fire_pit_flame(), os.path.join(BLOCK_DIR, "fire_pit", "flame.png"))
+
+    os.makedirs(os.path.join(BLOCK_DIR, "ore_crushing_stone"), exist_ok=True)
+    save(gen_ore_crushing_stone_base(), os.path.join(BLOCK_DIR, "ore_crushing_stone", "base.png"))
+    save(gen_ore_crushing_stone_bowl(), os.path.join(BLOCK_DIR, "ore_crushing_stone", "bowl.png"))
+    save(gen_ore_crushing_stone_pestle(), os.path.join(BLOCK_DIR, "ore_crushing_stone", "pestle.png"))
+
+    os.makedirs(os.path.join(BLOCK_DIR, "clay_kiln"), exist_ok=True)
+    save(gen_clay_kiln_body(), os.path.join(BLOCK_DIR, "clay_kiln", "body.png"))
+    save(gen_clay_kiln_mouth(), os.path.join(BLOCK_DIR, "clay_kiln", "mouth.png"))
 
 
 if __name__ == "__main__":

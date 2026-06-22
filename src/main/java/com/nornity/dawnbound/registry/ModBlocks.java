@@ -1,7 +1,9 @@
 package com.nornity.dawnbound.registry;
 
+import com.nornity.dawnbound.block.ClayKilnBlock;
 import com.nornity.dawnbound.block.FirePitBlock;
 import com.nornity.dawnbound.block.FlatStoneWorkSurfaceBlock;
+import com.nornity.dawnbound.block.OreCrushingStoneBlock;
 import com.nornity.dawnbound.block.PrimitiveWorkStumpBlock;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
@@ -53,6 +55,26 @@ public class ModBlocks {
             .sound(SoundType.STONE)
             .strength(1.0f, 2.0f)
             .lightLevel(state -> 7)
+            .noOcclusion())
+    );
+
+    public static final DeferredBlock<OreCrushingStoneBlock> ORE_CRUSHING_STONE = BLOCKS.register(
+        "ore_crushing_stone",
+        id -> new OreCrushingStoneBlock(BlockBehaviour.Properties.of()
+            .setId(ResourceKey.create(Registries.BLOCK, id))
+            .mapColor(MapColor.STONE)
+            .sound(SoundType.STONE)
+            .strength(2.0f, 3.0f)
+            .noOcclusion())
+    );
+
+    public static final DeferredBlock<ClayKilnBlock> CLAY_KILN = BLOCKS.register(
+        "clay_kiln",
+        id -> new ClayKilnBlock(BlockBehaviour.Properties.of()
+            .setId(ResourceKey.create(Registries.BLOCK, id))
+            .mapColor(MapColor.TERRACOTTA_ORANGE)
+            .sound(SoundType.STONE)
+            .strength(2.5f, 4.0f)
             .noOcclusion())
     );
 }

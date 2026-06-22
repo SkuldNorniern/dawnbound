@@ -30,5 +30,9 @@
   "item.dawnbound.saw.tooltip": "Craft with logs to make planks; loses durability.",
   "item.dawnbound.bound_saw": "Bound Saw",
   "item.dawnbound.bound_saw.tooltip": "A sturdier saw with a bound stone edge.",
-  "block.dawnbound.fire_pit": "Fire Pit"
+  "block.dawnbound.fire_pit": "Fire Pit",
+  "item.dawnbound.crushed_copper_ore": "Crushed Copper Ore",
+  "item.dawnbound.crushed_iron_ore": "Crushed Iron Ore",
+  "block.dawnbound.ore_crushing_stone": "Ore Crushing Stone",
+  "block.dawnbound.clay_kiln": "Clay Kiln"
 }

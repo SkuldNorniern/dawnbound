@@ -55,6 +55,10 @@ public class Dawnbound {
                 output.accept(ModItems.SAW.get());
                 output.accept(ModItems.BOUND_SAW.get());
                 output.accept(ModItems.FIRE_PIT.get());
+                output.accept(ModItems.CRUSHED_COPPER_ORE.get());
+                output.accept(ModItems.CRUSHED_IRON_ORE.get());
+                output.accept(ModItems.ORE_CRUSHING_STONE.get());
+                output.accept(ModItems.CLAY_KILN.get());
             })
             .build());
 

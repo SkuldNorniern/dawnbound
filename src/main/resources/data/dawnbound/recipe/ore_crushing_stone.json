@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "dawnbound:loose_stone",
+    "dawnbound:loose_stone",
+    "dawnbound:loose_stone",
+    "dawnbound:sharp_stone"
+  ],
+  "result": {
+    "id": "dawnbound:ore_crushing_stone",
+    "count": 1
+  }
+}
