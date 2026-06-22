@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "dawnbound:item/sharp_flint"
+    "layer0": "dawnbound:item/materials/sharp_flint"
   }
 }

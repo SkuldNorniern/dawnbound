@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "dawnbound:item/clay_lump"
+    "layer0": "dawnbound:item/materials/clay_lump"
   }
 }

@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "dawnbound:item/bark"
+    "layer0": "dawnbound:item/materials/bark"
   }
 }

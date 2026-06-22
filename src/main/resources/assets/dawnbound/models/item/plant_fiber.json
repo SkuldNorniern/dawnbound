@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "dawnbound:item/plant_fiber"
+    "layer0": "dawnbound:item/materials/plant_fiber"
   }
 }

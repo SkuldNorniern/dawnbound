@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/handheld",
   "textures": {
-    "layer0": "dawnbound:item/stone_hatchet"
+    "layer0": "dawnbound:item/tools/stone_hatchet"
   }
 }

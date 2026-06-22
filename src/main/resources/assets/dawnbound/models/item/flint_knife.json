@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/handheld",
   "textures": {
-    "layer0": "dawnbound:item/flint_knife"
+    "layer0": "dawnbound:item/tools/flint_knife"
   }
 }

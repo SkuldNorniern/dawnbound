@@ -1,8 +1,8 @@
 {
   "textures": {
-    "bark": "dawnbound:block/primitive_work_stump_bark",
-    "top": "dawnbound:block/primitive_work_stump_top",
-    "particle": "dawnbound:block/primitive_work_stump_bark"
+    "bark": "dawnbound:block/primitive_work_stump/bark",
+    "top": "dawnbound:block/primitive_work_stump/top",
+    "particle": "dawnbound:block/primitive_work_stump/bark"
   },
   "elements": [
     {

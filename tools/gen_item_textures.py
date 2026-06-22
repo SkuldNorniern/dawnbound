@@ -154,25 +154,28 @@ def main():
     os.makedirs(BLOCK_DIR, exist_ok=True)
 
     items = {
-        "plant_fiber": gen_plant_fiber,
-        "cordage": gen_cordage,
-        "sharp_flint": gen_sharp_flint,
-        "sharp_stone": gen_sharp_stone,
-        "loose_stone": gen_loose_stone,
-        "clay_lump": gen_clay_lump,
-        "bark": gen_bark,
-        "rough_planks": gen_rough_planks,
-        "flint_knife": gen_flint_knife,
-        "stone_hatchet": gen_stone_hatchet,
-        "digging_stick": gen_digging_stick,
+        "materials/plant_fiber": gen_plant_fiber,
+        "materials/cordage": gen_cordage,
+        "materials/sharp_flint": gen_sharp_flint,
+        "materials/sharp_stone": gen_sharp_stone,
+        "materials/loose_stone": gen_loose_stone,
+        "materials/clay_lump": gen_clay_lump,
+        "materials/bark": gen_bark,
+        "materials/rough_planks": gen_rough_planks,
+        "tools/flint_knife": gen_flint_knife,
+        "tools/stone_hatchet": gen_stone_hatchet,
+        "tools/digging_stick": gen_digging_stick,
     }
     for name, gen in items.items():
-        save(gen(), os.path.join(ITEM_DIR, f"{name}.png"))
+        out_path = os.path.join(ITEM_DIR, f"{name}.png")
+        os.makedirs(os.path.dirname(out_path), exist_ok=True)
+        save(gen(), out_path)
 
     save(gen_work_mat(), os.path.join(BLOCK_DIR, "primitive_work_mat.png"))
     save(gen_stone_work_surface(), os.path.join(BLOCK_DIR, "flat_stone_work_surface.png"))
-    save(gen_work_stump_bark(), os.path.join(BLOCK_DIR, "primitive_work_stump_bark.png"))
-    save(gen_work_stump_top(), os.path.join(BLOCK_DIR, "primitive_work_stump_top.png"))
+    os.makedirs(os.path.join(BLOCK_DIR, "primitive_work_stump"), exist_ok=True)
+    save(gen_work_stump_bark(), os.path.join(BLOCK_DIR, "primitive_work_stump", "bark.png"))
+    save(gen_work_stump_top(), os.path.join(BLOCK_DIR, "primitive_work_stump", "top.png"))
 
 
 if __name__ == "__main__":

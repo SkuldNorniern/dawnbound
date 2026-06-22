@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/handheld",
   "textures": {
-    "layer0": "dawnbound:item/digging_stick"
+    "layer0": "dawnbound:item/tools/digging_stick"
   }
 }
