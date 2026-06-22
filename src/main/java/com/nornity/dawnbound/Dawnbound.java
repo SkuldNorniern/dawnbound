@@ -2,6 +2,7 @@ package com.nornity.dawnbound;
 
 import com.mojang.logging.LogUtils;
 import com.nornity.dawnbound.config.Config;
+import com.nornity.dawnbound.event.HandRestrictionEvents;
 import com.nornity.dawnbound.registry.ModItems;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
@@ -11,6 +12,7 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
+import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import org.slf4j.Logger;
@@ -36,6 +38,10 @@ public class Dawnbound {
                 output.accept(ModItems.LOOSE_STONE.get());
                 output.accept(ModItems.CLAY_LUMP.get());
                 output.accept(ModItems.BARK.get());
+                output.accept(ModItems.ROUGH_PLANKS.get());
+                output.accept(ModItems.FLINT_KNIFE.get());
+                output.accept(ModItems.STONE_HATCHET.get());
+                output.accept(ModItems.DIGGING_STICK.get());
             })
             .build());
 
@@ -43,5 +49,6 @@ public class Dawnbound {
         ModItems.ITEMS.register(modEventBus);
         CREATIVE_MODE_TABS.register(modEventBus);
         modContainer.registerConfig(ModConfig.Type.SERVER, Config.SERVER_SPEC);
+        NeoForge.EVENT_BUS.register(HandRestrictionEvents.class);
     }
 }
