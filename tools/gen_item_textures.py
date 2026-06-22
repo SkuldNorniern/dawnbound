@@ -261,7 +261,6 @@ def gen_fire_pit_logs():
 
 
 def gen_fire_pit_flame_frames():
-    background = (40, 28, 20, 255)
     outer = (235, 140, 40, 255)
     outline = (150, 60, 10, 255)
     inner = (255, 220, 110, 255)
@@ -275,7 +274,6 @@ def gen_fire_pit_flame_frames():
     for outer_pts, inner_pts in frame_shapes:
         img = new_canvas()
         d = ImageDraw.Draw(img)
-        d.rectangle([0, 0, 15, 15], fill=background)
         d.polygon(outer_pts, fill=outer, outline=outline)
         d.polygon(inner_pts, fill=inner)
         frames.append(img)
