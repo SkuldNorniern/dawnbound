@@ -46,6 +46,12 @@ public class Dawnbound {
                 output.accept(ModItems.PRIMITIVE_WORK_MAT.get());
                 output.accept(ModItems.FLAT_STONE_WORK_SURFACE.get());
                 output.accept(ModItems.PRIMITIVE_WORK_STUMP.get());
+                output.accept(ModItems.KNAPPED_STONE_HEAD.get());
+                output.accept(ModItems.BOUND_STONE_HEAD.get());
+                output.accept(ModItems.RESIN.get());
+                output.accept(ModItems.RAWHIDE_CORD.get());
+                output.accept(ModItems.CRUDE_HANDLE.get());
+                output.accept(ModItems.TOOL_BINDING.get());
             })
             .build());
 

@@ -25,6 +25,18 @@ public class ModItems {
         ITEMS.registerSimpleItem("bark");
     public static final DeferredItem<Item> ROUGH_PLANKS =
         ITEMS.registerSimpleItem("rough_planks");
+    public static final DeferredItem<Item> KNAPPED_STONE_HEAD =
+        ITEMS.registerSimpleItem("knapped_stone_head");
+    public static final DeferredItem<Item> BOUND_STONE_HEAD =
+        ITEMS.registerSimpleItem("bound_stone_head");
+    public static final DeferredItem<Item> RESIN =
+        ITEMS.registerSimpleItem("resin");
+    public static final DeferredItem<Item> RAWHIDE_CORD =
+        ITEMS.registerSimpleItem("rawhide_cord");
+    public static final DeferredItem<Item> CRUDE_HANDLE =
+        ITEMS.registerSimpleItem("crude_handle");
+    public static final DeferredItem<Item> TOOL_BINDING =
+        ITEMS.registerSimpleItem("tool_binding");
 
     public static final DeferredItem<Item> FLINT_KNIFE =
         ITEMS.registerSimpleItem("flint_knife", props -> props.durability(60));

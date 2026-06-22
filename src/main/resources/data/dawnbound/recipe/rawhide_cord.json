@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "dawnbound:cordage",
+    "minecraft:leather"
+  ],
+  "result": {
+    "id": "dawnbound:rawhide_cord",
+    "count": 1
+  }
+}

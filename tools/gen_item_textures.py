@@ -109,6 +109,54 @@ def gen_digging_stick():
     return img
 
 
+def gen_knapped_stone_head():
+    img = new_canvas()
+    d = ImageDraw.Draw(img)
+    d.polygon([(8, 2), (13, 6), (11, 13), (5, 13), (3, 6)], fill=(130, 126, 120, 255), outline=OUTLINE)
+    d.line([(6, 6), (10, 8)], fill=(160, 156, 148, 255))
+    d.line([(6, 9), (9, 6)], fill=(100, 96, 90, 255))
+    return img
+
+
+def gen_bound_stone_head():
+    img = gen_knapped_stone_head()
+    d = ImageDraw.Draw(img)
+    d.line([(5, 12), (11, 12)], fill=(150, 110, 60, 255), width=2)
+    return img
+
+
+def gen_resin():
+    img = new_canvas()
+    d = ImageDraw.Draw(img)
+    d.polygon([(7, 3), (11, 6), (10, 12), (6, 12), (5, 6)], fill=(190, 120, 40, 255), outline=(140, 80, 20, 255))
+    d.point((8, 6), fill=(235, 180, 100, 255))
+    return img
+
+
+def gen_rawhide_cord():
+    img = new_canvas()
+    d = ImageDraw.Draw(img)
+    d.line([(3, 12), (12, 4)], fill=(195, 165, 120, 255), width=3)
+    d.line([(3, 12), (12, 4)], fill=(220, 195, 155, 255), width=1)
+    return img
+
+
+def gen_crude_handle():
+    img = new_canvas()
+    d = ImageDraw.Draw(img)
+    d.line([(4, 13), (12, 3)], fill=(150, 110, 60, 255), width=3)
+    d.line([(5, 6), (8, 9)], fill=(195, 165, 120, 255), width=1)
+    return img
+
+
+def gen_tool_binding():
+    img = new_canvas()
+    d = ImageDraw.Draw(img)
+    d.ellipse([3, 5, 13, 11], outline=(195, 165, 120, 255), width=2)
+    d.line([(4, 8), (12, 8)], fill=(190, 120, 40, 255), width=1)
+    return img
+
+
 def gen_work_mat():
     img = new_canvas()
     d = ImageDraw.Draw(img)
@@ -165,6 +213,12 @@ def main():
         "tools/flint_knife": gen_flint_knife,
         "tools/stone_hatchet": gen_stone_hatchet,
         "tools/digging_stick": gen_digging_stick,
+        "materials/knapped_stone_head": gen_knapped_stone_head,
+        "materials/bound_stone_head": gen_bound_stone_head,
+        "materials/resin": gen_resin,
+        "materials/rawhide_cord": gen_rawhide_cord,
+        "materials/crude_handle": gen_crude_handle,
+        "materials/tool_binding": gen_tool_binding,
     }
     for name, gen in items.items():
         out_path = os.path.join(ITEM_DIR, f"{name}.png")

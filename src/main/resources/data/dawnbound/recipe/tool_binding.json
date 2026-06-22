@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "dawnbound:rawhide_cord",
+    "dawnbound:resin"
+  ],
+  "result": {
+    "id": "dawnbound:tool_binding",
+    "count": 1
+  }
+}

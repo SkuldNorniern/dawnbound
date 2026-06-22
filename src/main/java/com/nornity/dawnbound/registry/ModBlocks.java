@@ -1,5 +1,7 @@
 package com.nornity.dawnbound.registry;
 
+import com.nornity.dawnbound.block.FlatStoneWorkSurfaceBlock;
+import com.nornity.dawnbound.block.PrimitiveWorkStumpBlock;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.block.Block;
@@ -22,9 +24,9 @@ public class ModBlocks {
             .noOcclusion())
     );
 
-    public static final DeferredBlock<Block> FLAT_STONE_WORK_SURFACE = BLOCKS.register(
+    public static final DeferredBlock<FlatStoneWorkSurfaceBlock> FLAT_STONE_WORK_SURFACE = BLOCKS.register(
         "flat_stone_work_surface",
-        id -> new Block(BlockBehaviour.Properties.of()
+        id -> new FlatStoneWorkSurfaceBlock(BlockBehaviour.Properties.of()
             .setId(ResourceKey.create(Registries.BLOCK, id))
             .mapColor(MapColor.STONE)
             .sound(SoundType.STONE)
@@ -32,9 +34,9 @@ public class ModBlocks {
             .noOcclusion())
     );
 
-    public static final DeferredBlock<Block> PRIMITIVE_WORK_STUMP = BLOCKS.register(
+    public static final DeferredBlock<PrimitiveWorkStumpBlock> PRIMITIVE_WORK_STUMP = BLOCKS.register(
         "primitive_work_stump",
-        id -> new Block(BlockBehaviour.Properties.of()
+        id -> new PrimitiveWorkStumpBlock(BlockBehaviour.Properties.of()
             .setId(ResourceKey.create(Registries.BLOCK, id))
             .mapColor(MapColor.WOOD)
             .sound(SoundType.WOOD)

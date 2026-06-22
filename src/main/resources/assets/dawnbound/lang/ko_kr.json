@@ -16,7 +16,14 @@
   "item.dawnbound.sharp_flint.tooltip": "첫 칼날을 위한 날카로운 모서리입니다.",
   "item.dawnbound.stone_hatchet.tooltip": "통나무를 천천히 채집할 수 있습니다.",
   "dawnbound.message.requires_hatchet": "손도끼나 도끼가 필요합니다.",
+  "dawnbound.message.requires_pickaxe": "곡괭이가 필요합니다.",
   "block.dawnbound.primitive_work_mat": "원시 작업 깔개",
   "block.dawnbound.flat_stone_work_surface": "평평한 돌 작업대",
-  "block.dawnbound.primitive_work_stump": "원시 작업 그루터기"
+  "block.dawnbound.primitive_work_stump": "원시 작업 그루터기",
+  "item.dawnbound.knapped_stone_head": "타격된 돌촉",
+  "item.dawnbound.bound_stone_head": "결속된 돌촉",
+  "item.dawnbound.resin": "송진",
+  "item.dawnbound.rawhide_cord": "생가죽 끈",
+  "item.dawnbound.crude_handle": "조잡한 손잡이",
+  "item.dawnbound.tool_binding": "도구 결속구"
 }

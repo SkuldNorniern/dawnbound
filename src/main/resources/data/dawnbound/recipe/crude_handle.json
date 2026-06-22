@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:stick",
+    "dawnbound:cordage"
+  ],
+  "result": {
+    "id": "dawnbound:crude_handle",
+    "count": 1
+  }
+}

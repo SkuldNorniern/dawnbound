@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "dawnbound:bark",
+    "dawnbound:bark"
+  ],
+  "result": {
+    "id": "dawnbound:resin",
+    "count": 1
+  }
+}

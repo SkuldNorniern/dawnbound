@@ -16,7 +16,14 @@
   "item.dawnbound.sharp_flint.tooltip": "A cutting edge for your first knife.",
   "item.dawnbound.stone_hatchet.tooltip": "Can harvest logs, slowly.",
   "dawnbound.message.requires_hatchet": "You need a hatchet or axe for this.",
+  "dawnbound.message.requires_pickaxe": "You need a pickaxe for this.",
   "block.dawnbound.primitive_work_mat": "Primitive Work Mat",
   "block.dawnbound.flat_stone_work_surface": "Flat Stone Work Surface",
-  "block.dawnbound.primitive_work_stump": "Primitive Work Stump"
+  "block.dawnbound.primitive_work_stump": "Primitive Work Stump",
+  "item.dawnbound.knapped_stone_head": "Knapped Stone Head",
+  "item.dawnbound.bound_stone_head": "Bound Stone Head",
+  "item.dawnbound.resin": "Resin",
+  "item.dawnbound.rawhide_cord": "Rawhide Cord",
+  "item.dawnbound.crude_handle": "Crude Handle",
+  "item.dawnbound.tool_binding": "Tool Binding"
 }
