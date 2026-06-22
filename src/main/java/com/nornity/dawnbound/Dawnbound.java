@@ -3,6 +3,8 @@ package com.nornity.dawnbound;
 import com.mojang.logging.LogUtils;
 import com.nornity.dawnbound.config.Config;
 import com.nornity.dawnbound.event.HandRestrictionEvents;
+import com.nornity.dawnbound.event.OnboardingEvents;
+import com.nornity.dawnbound.registry.ModAttachments;
 import com.nornity.dawnbound.registry.ModBlocks;
 import com.nornity.dawnbound.registry.ModItems;
 import net.minecraft.core.registries.Registries;
@@ -66,8 +68,10 @@ public class Dawnbound {
     public Dawnbound(IEventBus modEventBus, ModContainer modContainer) {
         ModItems.ITEMS.register(modEventBus);
         ModBlocks.BLOCKS.register(modEventBus);
+        ModAttachments.ATTACHMENT_TYPES.register(modEventBus);
         CREATIVE_MODE_TABS.register(modEventBus);
         modContainer.registerConfig(ModConfig.Type.SERVER, Config.SERVER_SPEC);
         NeoForge.EVENT_BUS.register(HandRestrictionEvents.class);
+        NeoForge.EVENT_BUS.register(OnboardingEvents.class);
     }
 }

@@ -35,5 +35,9 @@
   "item.dawnbound.crushed_iron_ore": "Crushed Iron Ore",
   "block.dawnbound.ore_crushing_stone": "Ore Crushing Stone",
   "block.dawnbound.clay_kiln": "Clay Kiln",
-  "block.dawnbound.bloomery": "Bloomery"
+  "block.dawnbound.bloomery": "Bloomery",
+  "dawnbound.onboarding.intro.1": "Dawnbound changes early survival.",
+  "dawnbound.onboarding.intro.2": "Your bare hands cannot harvest logs.",
+  "dawnbound.onboarding.intro.3": "Start with grass, leaves, gravel, and clay.",
+  "dawnbound.onboarding.intro.4": "Make cordage, sharp stone, and your first hatchet."
 }
