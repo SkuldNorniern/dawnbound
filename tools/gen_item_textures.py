@@ -6,7 +6,9 @@ from PIL import ImageDraw
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "..", "utils"))
 from pixel_art import new_canvas, save, save_animated  # noqa: E402
+from gen_item_definitions import generate_item_definitions  # noqa: E402
 
+ASSETS_ROOT = os.path.join(os.path.dirname(__file__), "..", "src", "main", "resources")
 ITEM_DIR = os.path.join(
     os.path.dirname(__file__), "..", "src", "main", "resources", "assets", "dawnbound", "textures", "item"
 )
@@ -413,6 +415,8 @@ def main():
     os.makedirs(os.path.join(BLOCK_DIR, "bloomery"), exist_ok=True)
     save(gen_bloomery_body(), os.path.join(BLOCK_DIR, "bloomery", "body.png"))
     save_animated(gen_bloomery_vent_frames(), os.path.join(BLOCK_DIR, "bloomery", "vent.png"), frametime=5)
+
+    generate_item_definitions(ASSETS_ROOT, "dawnbound")
 
 
 if __name__ == "__main__":
