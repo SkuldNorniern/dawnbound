@@ -6,17 +6,21 @@ import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.VoxelShape;
 
 public class BloomeryBlock extends Block {
     // Iron needs more heat than copper, so it costs more charcoal per craft - a real cost,
     // not a duplication exploit, since crushing itself (Ore Crushing Stone) is 1:1.
     private static final int CHARCOAL_COST = 2;
     private static final int INGOT_YIELD = 2;
+    private static final VoxelShape SHAPE = Block.box(1, 0, 1, 15, 16, 15);
 
     public BloomeryBlock(BlockBehaviour.Properties properties) {
         super(properties);
@@ -42,5 +46,10 @@ public class BloomeryBlock extends Block {
         }
 
         return InteractionResult.PASS;
+    }
+
+    @Override
+    protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
+        return SHAPE;
     }
 }

@@ -11,15 +11,19 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.VoxelShape;
 
 import java.util.Map;
 
 public class PrimitiveWorkStumpBlock extends Block {
+    private static final VoxelShape SHAPE = Block.box(2, 0, 2, 14, 11, 14);
     private static final Map<Item, Item> LOG_TO_PLANKS = Map.ofEntries(
         Map.entry(Items.OAK_LOG, Items.OAK_PLANKS),
         Map.entry(Items.SPRUCE_LOG, Items.SPRUCE_PLANKS),
@@ -73,5 +77,10 @@ public class PrimitiveWorkStumpBlock extends Block {
         }
 
         return InteractionResult.PASS;
+    }
+
+    @Override
+    protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
+        return SHAPE;
     }
 }

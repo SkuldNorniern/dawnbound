@@ -5,10 +5,10 @@ import com.nornity.dawnbound.block.ClayKilnBlock;
 import com.nornity.dawnbound.block.FirePitBlock;
 import com.nornity.dawnbound.block.FlatStoneWorkSurfaceBlock;
 import com.nornity.dawnbound.block.OreCrushingStoneBlock;
+import com.nornity.dawnbound.block.PrimitiveWorkMatBlock;
 import com.nornity.dawnbound.block.PrimitiveWorkStumpBlock;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
@@ -18,9 +18,9 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 public class ModBlocks {
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks("dawnbound");
 
-    public static final DeferredBlock<Block> PRIMITIVE_WORK_MAT = BLOCKS.register(
+    public static final DeferredBlock<PrimitiveWorkMatBlock> PRIMITIVE_WORK_MAT = BLOCKS.register(
         "primitive_work_mat",
-        id -> new Block(BlockBehaviour.Properties.of()
+        id -> new PrimitiveWorkMatBlock(BlockBehaviour.Properties.of()
             .setId(ResourceKey.create(Registries.BLOCK, id))
             .mapColor(MapColor.DIRT)
             .sound(SoundType.WOOL)

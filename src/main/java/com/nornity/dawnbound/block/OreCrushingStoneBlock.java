@@ -7,16 +7,20 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.VoxelShape;
 
 public class OreCrushingStoneBlock extends Block {
     // 1:1 - crushing is a required unlock step for the Kiln/Bloomery, not a free yield bonus.
     // The yield improvement only pays off after the full crush-then-smelt chain completes.
     private static final int CRUSHED_YIELD = 1;
+    private static final VoxelShape SHAPE = Block.box(1, 0, 1, 15, 11, 15);
 
     public OreCrushingStoneBlock(BlockBehaviour.Properties properties) {
         super(properties);
@@ -50,5 +54,10 @@ public class OreCrushingStoneBlock extends Block {
         }
 
         return InteractionResult.PASS;
+    }
+
+    @Override
+    protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
+        return SHAPE;
     }
 }
