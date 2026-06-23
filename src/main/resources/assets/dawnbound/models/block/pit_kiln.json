@@ -1,0 +1,32 @@
+{
+  "textures": {
+    "rim": "dawnbound:block/pit_kiln/rim",
+    "ash": "dawnbound:block/pit_kiln/ash",
+    "particle": "dawnbound:block/pit_kiln/ash"
+  },
+  "elements": [
+    {
+      "from": [1, 0, 1],
+      "to": [15, 2, 15],
+      "faces": {
+        "north": { "uv": [0, 0, 16, 16], "texture": "#rim" },
+        "south": { "uv": [0, 0, 16, 16], "texture": "#rim" },
+        "east": { "uv": [0, 0, 16, 16], "texture": "#rim" },
+        "west": { "uv": [0, 0, 16, 16], "texture": "#rim" },
+        "up": { "uv": [0, 0, 16, 16], "texture": "#rim" },
+        "down": { "uv": [0, 0, 16, 16], "texture": "#rim" }
+      }
+    },
+    {
+      "from": [3, 0, 3],
+      "to": [13, 1, 13],
+      "faces": {
+        "up": { "uv": [0, 0, 16, 16], "texture": "#ash" },
+        "north": { "uv": [0, 0, 16, 16], "texture": "#ash" },
+        "south": { "uv": [0, 0, 16, 16], "texture": "#ash" },
+        "east": { "uv": [0, 0, 16, 16], "texture": "#ash" },
+        "west": { "uv": [0, 0, 16, 16], "texture": "#ash" }
+      }
+    }
+  ]
+}

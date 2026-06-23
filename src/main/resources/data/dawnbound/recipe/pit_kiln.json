@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:dirt",
+    "minecraft:dirt",
+    "minecraft:dirt",
+    "minecraft:dirt"
+  ],
+  "result": {
+    "id": "dawnbound:pit_kiln",
+    "count": 1
+  }
+}

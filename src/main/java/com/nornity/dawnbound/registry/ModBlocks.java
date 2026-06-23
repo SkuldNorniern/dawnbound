@@ -5,6 +5,7 @@ import com.nornity.dawnbound.block.ClayKilnBlock;
 import com.nornity.dawnbound.block.FirePitBlock;
 import com.nornity.dawnbound.block.FlatStoneWorkSurfaceBlock;
 import com.nornity.dawnbound.block.OreCrushingStoneBlock;
+import com.nornity.dawnbound.block.PitKilnBlock;
 import com.nornity.dawnbound.block.PrimitiveWorkMatBlock;
 import com.nornity.dawnbound.block.PrimitiveWorkStumpBlock;
 import net.minecraft.core.registries.Registries;
@@ -56,6 +57,16 @@ public class ModBlocks {
             .sound(SoundType.STONE)
             .strength(1.0f, 2.0f)
             .lightLevel(state -> 7)
+            .noOcclusion())
+    );
+
+    public static final DeferredBlock<PitKilnBlock> PIT_KILN = BLOCKS.register(
+        "pit_kiln",
+        id -> new PitKilnBlock(BlockBehaviour.Properties.of()
+            .setId(ResourceKey.create(Registries.BLOCK, id))
+            .mapColor(MapColor.DIRT)
+            .sound(SoundType.GRAVEL)
+            .strength(1.0f, 1.5f)
             .noOcclusion())
     );
 

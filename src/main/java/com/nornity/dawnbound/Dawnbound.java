@@ -62,6 +62,7 @@ public class Dawnbound {
                 output.accept(ModItems.ORE_CRUSHING_STONE.get());
                 output.accept(ModItems.CLAY_KILN.get());
                 output.accept(ModItems.BLOOMERY.get());
+                output.accept(ModItems.PIT_KILN.get());
             })
             .build());
 

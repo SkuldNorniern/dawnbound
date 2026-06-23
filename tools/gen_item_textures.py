@@ -251,6 +251,24 @@ def gen_fire_pit_stone():
     return img
 
 
+def gen_pit_kiln_rim():
+    img = new_canvas()
+    d = ImageDraw.Draw(img)
+    d.rectangle([0, 0, 15, 15], fill=(96, 72, 48, 255))
+    d.rectangle([1, 1, 14, 14], outline=(70, 50, 32, 255), width=1)
+    return img
+
+
+def gen_pit_kiln_ash():
+    img = new_canvas()
+    d = ImageDraw.Draw(img)
+    d.rectangle([0, 0, 15, 15], fill=(54, 46, 40, 255))
+    for x, y in [(4, 5), (9, 4), (6, 9), (11, 10), (3, 11)]:
+        d.point((x, y), fill=(80, 70, 62, 255))
+        d.point((x + 1, y), fill=(36, 30, 26, 255))
+    return img
+
+
 def gen_fire_pit_logs():
     img = new_canvas()
     d = ImageDraw.Draw(img)
@@ -400,6 +418,10 @@ def main():
     save(gen_fire_pit_stone(), os.path.join(BLOCK_DIR, "fire_pit", "stone.png"))
     save(gen_fire_pit_logs(), os.path.join(BLOCK_DIR, "fire_pit", "logs.png"))
     save_animated(gen_fire_pit_flame_frames(), os.path.join(BLOCK_DIR, "fire_pit", "flame.png"), frametime=4)
+
+    os.makedirs(os.path.join(BLOCK_DIR, "pit_kiln"), exist_ok=True)
+    save(gen_pit_kiln_rim(), os.path.join(BLOCK_DIR, "pit_kiln", "rim.png"))
+    save(gen_pit_kiln_ash(), os.path.join(BLOCK_DIR, "pit_kiln", "ash.png"))
 
     os.makedirs(os.path.join(BLOCK_DIR, "ore_crushing_stone"), exist_ok=True)
     save(gen_ore_crushing_stone_base(), os.path.join(BLOCK_DIR, "ore_crushing_stone", "base.png"))

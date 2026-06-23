@@ -69,4 +69,6 @@ public class ModItems {
         ITEMS.registerSimpleBlockItem(ModBlocks.CLAY_KILN);
     public static final DeferredItem<BlockItem> BLOOMERY =
         ITEMS.registerSimpleBlockItem(ModBlocks.BLOOMERY);
+    public static final DeferredItem<BlockItem> PIT_KILN =
+        ITEMS.registerSimpleBlockItem(ModBlocks.PIT_KILN);
 }

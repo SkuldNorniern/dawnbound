@@ -39,5 +39,6 @@
   "dawnbound.onboarding.intro.1": "Dawnbound changes early survival.",
   "dawnbound.onboarding.intro.2": "Your bare hands cannot harvest logs.",
   "dawnbound.onboarding.intro.3": "Start with grass, leaves, gravel, and clay.",
-  "dawnbound.onboarding.intro.4": "Make cordage, sharp stone, and your first hatchet."
+  "dawnbound.onboarding.intro.4": "Make cordage, sharp stone, and your first hatchet.",
+  "block.dawnbound.pit_kiln": "Pit Kiln"
 }
