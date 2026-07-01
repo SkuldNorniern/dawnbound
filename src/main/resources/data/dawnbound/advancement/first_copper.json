@@ -1,0 +1,32 @@
+{
+  "parent": "dawnbound:clay_kiln",
+  "criteria": {
+    "copper_ingot": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:copper_ingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.dawnbound.first_copper.description"
+    },
+    "icon": {
+      "id": "minecraft:copper_ingot"
+    },
+    "title": {
+      "translate": "advancements.dawnbound.first_copper.title"
+    }
+  },
+  "requirements": [
+    [
+      "copper_ingot"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "dawnbound:work_surface",
+  "criteria": {
+    "knapped_head": {
+      "conditions": {
+        "items": [
+          {
+            "items": "dawnbound:knapped_stone_head"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.dawnbound.knapped_head.description"
+    },
+    "icon": {
+      "id": "dawnbound:knapped_stone_head"
+    },
+    "title": {
+      "translate": "advancements.dawnbound.knapped_head.title"
+    }
+  },
+  "requirements": [
+    [
+      "knapped_head"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

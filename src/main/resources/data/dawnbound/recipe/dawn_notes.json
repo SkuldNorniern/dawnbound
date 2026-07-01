@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "dawnbound:bark",
+    "dawnbound:plant_fiber",
+    "dawnbound:cordage"
+  ],
+  "result": {
+    "id": "dawnbound:dawn_notes",
+    "count": 1
+  }
+}

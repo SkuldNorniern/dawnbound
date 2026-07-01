@@ -1,0 +1,32 @@
+{
+  "parent": "dawnbound:first_copper",
+  "criteria": {
+    "bloomery": {
+      "conditions": {
+        "items": [
+          {
+            "items": "dawnbound:bloomery"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.dawnbound.bloomery.description"
+    },
+    "icon": {
+      "id": "dawnbound:bloomery"
+    },
+    "title": {
+      "translate": "advancements.dawnbound.bloomery.title"
+    }
+  },
+  "requirements": [
+    [
+      "bloomery"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

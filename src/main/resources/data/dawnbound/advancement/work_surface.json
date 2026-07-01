@@ -1,0 +1,32 @@
+{
+  "parent": "dawnbound:first_tool",
+  "criteria": {
+    "work_surface": {
+      "conditions": {
+        "items": [
+          {
+            "items": "dawnbound:flat_stone_work_surface"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.dawnbound.work_surface.description"
+    },
+    "icon": {
+      "id": "dawnbound:flat_stone_work_surface"
+    },
+    "title": {
+      "translate": "advancements.dawnbound.work_surface.title"
+    }
+  },
+  "requirements": [
+    [
+      "work_surface"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "dawnbound:ore_crushing",
+  "criteria": {
+    "clay_kiln": {
+      "conditions": {
+        "items": [
+          {
+            "items": "dawnbound:clay_kiln"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.dawnbound.clay_kiln.description"
+    },
+    "icon": {
+      "id": "dawnbound:clay_kiln"
+    },
+    "title": {
+      "translate": "advancements.dawnbound.clay_kiln.title"
+    }
+  },
+  "requirements": [
+    [
+      "clay_kiln"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

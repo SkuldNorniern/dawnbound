@@ -1,0 +1,32 @@
+{
+  "parent": "dawnbound:fire_pit",
+  "criteria": {
+    "ore_crushing_stone": {
+      "conditions": {
+        "items": [
+          {
+            "items": "dawnbound:ore_crushing_stone"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.dawnbound.ore_crushing.description"
+    },
+    "icon": {
+      "id": "dawnbound:ore_crushing_stone"
+    },
+    "title": {
+      "translate": "advancements.dawnbound.ore_crushing.title"
+    }
+  },
+  "requirements": [
+    [
+      "ore_crushing_stone"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

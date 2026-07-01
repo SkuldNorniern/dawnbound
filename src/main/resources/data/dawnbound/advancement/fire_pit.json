@@ -1,0 +1,32 @@
+{
+  "parent": "dawnbound:rough_planks",
+  "criteria": {
+    "fire_pit": {
+      "conditions": {
+        "items": [
+          {
+            "items": "dawnbound:fire_pit"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.dawnbound.fire_pit.description"
+    },
+    "icon": {
+      "id": "dawnbound:fire_pit"
+    },
+    "title": {
+      "translate": "advancements.dawnbound.fire_pit.title"
+    }
+  },
+  "requirements": [
+    [
+      "fire_pit"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

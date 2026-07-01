@@ -1,0 +1,32 @@
+{
+  "parent": "dawnbound:twisted_fiber",
+  "criteria": {
+    "dawn_notes": {
+      "conditions": {
+        "items": [
+          {
+            "items": "dawnbound:dawn_notes"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.dawnbound.dawn_notes.description"
+    },
+    "icon": {
+      "id": "dawnbound:dawn_notes"
+    },
+    "title": {
+      "translate": "advancements.dawnbound.dawn_notes.title"
+    }
+  },
+  "requirements": [
+    [
+      "dawn_notes"
+    ]
+  ],
+  "sends_telemetry_event": false
+}
