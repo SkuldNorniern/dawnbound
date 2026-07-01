@@ -1,6 +1,7 @@
 package com.nornity.dawnbound.block;
 
 import com.nornity.dawnbound.config.Config;
+import com.nornity.dawnbound.event.GuidanceMessages;
 import com.nornity.dawnbound.registry.ModItems;
 import com.nornity.dawnbound.tags.ModItemTags;
 import net.minecraft.core.BlockPos;
@@ -72,6 +73,9 @@ public class PrimitiveWorkStumpBlock extends Block {
             return InteractionResult.SUCCESS;
         }
 
+        if (!level.isClientSide()) {
+            GuidanceMessages.sendActionBar(player, "dawnbound.message.stump_needs_tool");
+        }
         return InteractionResult.TRY_WITH_EMPTY_HAND;
     }
 

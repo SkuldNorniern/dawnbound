@@ -1,5 +1,6 @@
 package com.nornity.dawnbound.block;
 
+import com.nornity.dawnbound.event.GuidanceMessages;
 import com.nornity.dawnbound.registry.ModItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionHand;
@@ -36,6 +37,9 @@ public class ClayKilnBlock extends Block {
 
         ItemStack offhand = player.getOffhandItem();
         if (!offhand.is(Items.CHARCOAL)) {
+            if (!level.isClientSide()) {
+                GuidanceMessages.sendActionBar(player, "dawnbound.message.kiln_needs_charcoal");
+            }
             return InteractionResult.TRY_WITH_EMPTY_HAND;
         }
 

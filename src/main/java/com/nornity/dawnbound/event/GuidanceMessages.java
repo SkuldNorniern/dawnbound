@@ -10,13 +10,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 
-final class GuidanceMessages {
+public final class GuidanceMessages {
     private static final Map<UUID, Long> LAST_HINT_TICK = new HashMap<>();
 
     private GuidanceMessages() {
     }
 
-    static void sendActionBar(Player player, String translationKey) {
+    public static void sendActionBar(Player player, String translationKey) {
         if (!Config.SERVER.showBlockedActionHints.get()) {
             return;
         }
