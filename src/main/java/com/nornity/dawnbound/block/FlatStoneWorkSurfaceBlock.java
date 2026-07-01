@@ -1,5 +1,6 @@
 package com.nornity.dawnbound.block;
 
+import com.nornity.dawnbound.event.GuidanceMessages;
 import com.nornity.dawnbound.registry.ModItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionHand;
@@ -26,7 +27,14 @@ public class FlatStoneWorkSurfaceBlock extends Block {
     protected InteractionResult useItemOn(
         ItemStack itemStack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult
     ) {
-        if (hand != InteractionHand.MAIN_HAND || (!itemStack.is(ModItems.SHARP_STONE.get()) && !itemStack.is(ModItems.LOOSE_STONE.get()))) {
+        if (hand != InteractionHand.MAIN_HAND) {
+            return InteractionResult.TRY_WITH_EMPTY_HAND;
+        }
+
+        if (!itemStack.is(ModItems.SHARP_STONE.get()) && !itemStack.is(ModItems.LOOSE_STONE.get())) {
+            if (!itemStack.isEmpty() && !level.isClientSide()) {
+                GuidanceMessages.sendActionBar(player, "dawnbound.message.work_surface_needs_stone");
+            }
             return InteractionResult.TRY_WITH_EMPTY_HAND;
         }
 

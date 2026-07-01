@@ -1,5 +1,6 @@
 package com.nornity.dawnbound.block;
 
+import com.nornity.dawnbound.event.GuidanceMessages;
 import net.minecraft.core.BlockPos;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.InteractionHand;
@@ -30,7 +31,21 @@ public class PitKilnBlock extends Block {
     protected InteractionResult useItemOn(
         ItemStack itemStack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult
     ) {
-        if (hand != InteractionHand.MAIN_HAND || !itemStack.is(ItemTags.LOGS) || (!player.hasInfiniteMaterials() && itemStack.getCount() < LOG_COST)) {
+        if (hand != InteractionHand.MAIN_HAND) {
+            return InteractionResult.TRY_WITH_EMPTY_HAND;
+        }
+
+        if (!itemStack.is(ItemTags.LOGS)) {
+            if (!itemStack.isEmpty() && !level.isClientSide()) {
+                GuidanceMessages.sendActionBar(player, "dawnbound.message.pit_kiln_needs_logs");
+            }
+            return InteractionResult.TRY_WITH_EMPTY_HAND;
+        }
+
+        if (!player.hasInfiniteMaterials() && itemStack.getCount() < LOG_COST) {
+            if (!level.isClientSide()) {
+                GuidanceMessages.sendActionBar(player, "dawnbound.message.pit_kiln_needs_two_logs");
+            }
             return InteractionResult.TRY_WITH_EMPTY_HAND;
         }
 

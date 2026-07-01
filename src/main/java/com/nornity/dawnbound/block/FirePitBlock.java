@@ -1,5 +1,6 @@
 package com.nornity.dawnbound.block;
 
+import com.nornity.dawnbound.event.GuidanceMessages;
 import com.nornity.dawnbound.registry.ModItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.tags.ItemTags;
@@ -28,7 +29,14 @@ public class FirePitBlock extends Block {
     protected InteractionResult useItemOn(
         ItemStack itemStack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult
     ) {
-        if (hand != InteractionHand.MAIN_HAND || (!itemStack.is(ItemTags.LOGS) && !itemStack.is(ModItems.BARK.get()))) {
+        if (hand != InteractionHand.MAIN_HAND) {
+            return InteractionResult.TRY_WITH_EMPTY_HAND;
+        }
+
+        if (!itemStack.is(ItemTags.LOGS) && !itemStack.is(ModItems.BARK.get())) {
+            if (!itemStack.isEmpty() && !level.isClientSide()) {
+                GuidanceMessages.sendActionBar(player, "dawnbound.message.fire_pit_needs_fuel");
+            }
             return InteractionResult.TRY_WITH_EMPTY_HAND;
         }
 

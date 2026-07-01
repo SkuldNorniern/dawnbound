@@ -1,5 +1,6 @@
 package com.nornity.dawnbound.block;
 
+import com.nornity.dawnbound.event.GuidanceMessages;
 import com.nornity.dawnbound.registry.ModItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionHand;
@@ -47,6 +48,9 @@ public class OreCrushingStoneBlock extends Block {
 
         Item crushed = crushedResultFor(itemStack.getItem());
         if (crushed == null) {
+            if (!itemStack.isEmpty() && !level.isClientSide()) {
+                GuidanceMessages.sendActionBar(player, "dawnbound.message.crusher_needs_raw_ore");
+            }
             return InteractionResult.TRY_WITH_EMPTY_HAND;
         }
 
