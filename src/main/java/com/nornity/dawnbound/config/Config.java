@@ -33,6 +33,15 @@ public class Config {
         public final ModConfigSpec.BooleanValue enableCaveIns;
         public final ModConfigSpec.BooleanValue enableFoodSpoilage;
         public final ModConfigSpec.BooleanValue enableTemperatureDifficulty;
+        public final ModConfigSpec.BooleanValue enableStaminaLikeExhaustion;
+        public final ModConfigSpec.BooleanValue wrongToolExtraExhaustion;
+        public final ModConfigSpec.BooleanValue heavyToolExtraExhaustion;
+
+        public final ModConfigSpec.BooleanValue enableDynamicTreesCompat;
+        public final ModConfigSpec.BooleanValue dynamicTreesRespectToolProgression;
+        public final ModConfigSpec.BooleanValue dynamicTreesAllowAxeChoppedPlanks;
+        public final ModConfigSpec.BooleanValue dynamicTreesAllowSawPlanks;
+        public final ModConfigSpec.BooleanValue dynamicTreesLeafFiberDrops;
 
         public final ModConfigSpec.BooleanValue showFirstSpawnGuide;
         public final ModConfigSpec.BooleanValue showBlockedActionHints;
@@ -88,6 +97,25 @@ public class Config {
                 .define("enableFoodSpoilage", false);
             enableTemperatureDifficulty = builder
                 .define("enableTemperatureDifficulty", false);
+            enableStaminaLikeExhaustion = builder
+                .define("enableStaminaLikeExhaustion", false);
+            wrongToolExtraExhaustion = builder
+                .define("wrongToolExtraExhaustion", true);
+            heavyToolExtraExhaustion = builder
+                .define("heavyToolExtraExhaustion", false);
+            builder.pop();
+
+            builder.push("compat");
+            enableDynamicTreesCompat = builder
+                .define("enableDynamicTreesCompat", true);
+            dynamicTreesRespectToolProgression = builder
+                .define("dynamicTreesRespectToolProgression", true);
+            dynamicTreesAllowAxeChoppedPlanks = builder
+                .define("dynamicTreesAllowAxeChoppedPlanks", true);
+            dynamicTreesAllowSawPlanks = builder
+                .define("dynamicTreesAllowSawPlanks", true);
+            dynamicTreesLeafFiberDrops = builder
+                .define("dynamicTreesLeafFiberDrops", true);
             builder.pop();
 
             builder.push("onboarding");
