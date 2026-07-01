@@ -4,9 +4,10 @@ import com.nornity.dawnbound.config.Config;
 import com.nornity.dawnbound.registry.ModItems;
 import com.nornity.dawnbound.tags.ModItemTags;
 import net.minecraft.core.BlockPos;
-import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.InteractionHand;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -44,39 +45,49 @@ public class PrimitiveWorkStumpBlock extends Block {
     }
 
     @Override
-    protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
-        if (level.isClientSide()) {
-            return InteractionResult.PASS;
+    protected InteractionResult useItemOn(
+        ItemStack itemStack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult
+    ) {
+        if (hand != InteractionHand.MAIN_HAND || !itemStack.is(ItemTags.LOGS)) {
+            return InteractionResult.TRY_WITH_EMPTY_HAND;
         }
 
-        ItemStack held = player.getMainHandItem();
         ItemStack offhand = player.getOffhandItem();
-
-        if (Config.SERVER.enableSawLogToPlanksRecipe.get() && held.is(ItemTags.LOGS) && offhand.is(ModItemTags.SAWS)) {
-            Item planksItem = LOG_TO_PLANKS.get(held.getItem());
-            if (planksItem != null) {
-                held.shrink(1);
-                ItemStack planks = new ItemStack(planksItem, Config.SERVER.sawPlankYield.get());
-                if (!player.getInventory().add(planks)) {
-                    player.drop(planks, false);
-                }
-                if (level instanceof ServerLevel serverLevel) {
-                    offhand.hurtAndBreak(Config.SERVER.sawDurabilityCostPerPlankCraft.get(), serverLevel, player, item -> {});
+        if (Config.SERVER.enableSawLogToPlanksRecipe.get() && offhand.is(ModItemTags.SAWS)) {
+            Item planksItem = LOG_TO_PLANKS.get(itemStack.getItem());
+            if (planksItem != null && Config.SERVER.sawPlankYield.get() > 0) {
+                if (!level.isClientSide()) {
+                    processLog(itemStack, new ItemStack(planksItem, Config.SERVER.sawPlankYield.get()), player);
+                    damageOffhandTool(offhand, player, Config.SERVER.sawDurabilityCostPerPlankCraft.get());
                 }
                 return InteractionResult.SUCCESS;
             }
         }
 
-        if (Config.SERVER.allowAxeChoppedPlanks.get() && held.is(ItemTags.LOGS) && offhand.is(ItemTags.AXES)) {
-            held.shrink(1);
-            ItemStack planks = new ItemStack(ModItems.ROUGH_PLANKS.get(), Config.SERVER.axeChoppedPlankYield.get());
-            if (!player.getInventory().add(planks)) {
-                player.drop(planks, false);
+        if (Config.SERVER.allowAxeChoppedPlanks.get() && offhand.is(ItemTags.AXES) && Config.SERVER.axeChoppedPlankYield.get() > 0) {
+            if (!level.isClientSide()) {
+                processLog(itemStack, new ItemStack(ModItems.ROUGH_PLANKS.get(), Config.SERVER.axeChoppedPlankYield.get()), player);
+                damageOffhandTool(offhand, player, 1);
             }
             return InteractionResult.SUCCESS;
         }
 
-        return InteractionResult.PASS;
+        return InteractionResult.TRY_WITH_EMPTY_HAND;
+    }
+
+    private static void processLog(ItemStack logStack, ItemStack output, Player player) {
+        if (!player.hasInfiniteMaterials()) {
+            logStack.shrink(1);
+        }
+        if (!player.getInventory().add(output)) {
+            player.drop(output, false);
+        }
+    }
+
+    private static void damageOffhandTool(ItemStack toolStack, Player player, int amount) {
+        if (amount > 0 && !player.hasInfiniteMaterials()) {
+            toolStack.hurtAndBreak(amount, player, EquipmentSlot.OFFHAND);
+        }
     }
 
     @Override
