@@ -47,6 +47,7 @@
   "dawnbound.onboarding.intro.2": "Your bare hands cannot harvest logs.",
   "dawnbound.onboarding.intro.3": "Start with grass, leaves, gravel, and clay.",
   "dawnbound.onboarding.intro.4": "Make cordage, sharp stone, and your first hatchet.",
+  "dawnbound.command.guide.disabled": "The Dawnbound guide command is disabled on this server.",
   "block.dawnbound.pit_kiln": "Pit Kiln",
   "advancements.dawnbound.root.title": "Empty Hands",
   "advancements.dawnbound.root.description": "Dawnbound changes the first day. Start with what the ground gives you.",

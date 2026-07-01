@@ -31,6 +31,10 @@ public class OnboardingEvents {
         }
         player.setData(ModAttachments.HAS_SEEN_INTRO.get(), true);
 
+        sendIntro(player);
+    }
+
+    static void sendIntro(Player player) {
         for (String key : INTRO_LINES) {
             player.sendSystemMessage(Component.translatable(key));
         }

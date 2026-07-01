@@ -2,6 +2,7 @@ package com.nornity.dawnbound;
 
 import com.mojang.logging.LogUtils;
 import com.nornity.dawnbound.config.Config;
+import com.nornity.dawnbound.event.GuideCommandEvents;
 import com.nornity.dawnbound.event.HandRestrictionEvents;
 import com.nornity.dawnbound.event.ItemTooltipEvents;
 import com.nornity.dawnbound.event.OnboardingEvents;
@@ -73,6 +74,7 @@ public class Dawnbound {
         ModAttachments.ATTACHMENT_TYPES.register(modEventBus);
         CREATIVE_MODE_TABS.register(modEventBus);
         modContainer.registerConfig(ModConfig.Type.SERVER, Config.SERVER_SPEC);
+        NeoForge.EVENT_BUS.register(GuideCommandEvents.class);
         NeoForge.EVENT_BUS.register(HandRestrictionEvents.class);
         NeoForge.EVENT_BUS.register(ItemTooltipEvents.class);
         NeoForge.EVENT_BUS.register(OnboardingEvents.class);
