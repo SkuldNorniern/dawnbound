@@ -1,5 +1,6 @@
 package com.nornity.dawnbound.registry;
 
+import com.nornity.dawnbound.item.DawnNotesItem;
 import com.nornity.dawnbound.tool.PrimitiveToolMaterials;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -41,6 +42,8 @@ public class ModItems {
         ITEMS.registerSimpleItem("crushed_copper_ore");
     public static final DeferredItem<Item> CRUSHED_IRON_ORE =
         ITEMS.registerSimpleItem("crushed_iron_ore");
+    public static final DeferredItem<Item> DAWN_NOTES =
+        ITEMS.registerItem("dawn_notes", DawnNotesItem::new);
 
     public static final DeferredItem<Item> FLINT_KNIFE =
         ITEMS.registerSimpleItem("flint_knife", props -> props.durability(60));

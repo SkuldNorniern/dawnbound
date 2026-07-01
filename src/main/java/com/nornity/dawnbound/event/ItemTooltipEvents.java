@@ -42,6 +42,9 @@ public class ItemTooltipEvents {
         if (item == ModItems.BOUND_SAW.get()) {
             return "item.dawnbound.bound_saw.tooltip";
         }
+        if (item == ModItems.DAWN_NOTES.get()) {
+            return "item.dawnbound.dawn_notes.tooltip";
+        }
         return null;
     }
 }

@@ -40,6 +40,8 @@
   "block.dawnbound.fire_pit": "Fire Pit",
   "item.dawnbound.crushed_copper_ore": "Crushed Copper Ore",
   "item.dawnbound.crushed_iron_ore": "Crushed Iron Ore",
+  "item.dawnbound.dawn_notes": "Dawn Notes",
+  "item.dawnbound.dawn_notes.tooltip": "Use to reread your first survival steps.",
   "block.dawnbound.ore_crushing_stone": "Ore Crushing Stone",
   "block.dawnbound.clay_kiln": "Clay Kiln",
   "block.dawnbound.bloomery": "Bloomery",

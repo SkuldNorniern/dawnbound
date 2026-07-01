@@ -31,10 +31,17 @@ public class OnboardingEvents {
         }
         player.setData(ModAttachments.HAS_SEEN_INTRO.get(), true);
 
+        if (Config.SERVER.giveStarterGuide.get()) {
+            ItemStack notes = new ItemStack(ModItems.DAWN_NOTES.get());
+            if (!player.getInventory().add(notes)) {
+                player.drop(notes, false);
+            }
+        }
+
         sendIntro(player);
     }
 
-    static void sendIntro(Player player) {
+    public static void sendIntro(Player player) {
         for (String key : INTRO_LINES) {
             player.sendSystemMessage(Component.translatable(key));
         }
