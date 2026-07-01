@@ -3,7 +3,7 @@
   "category": "equipment",
   "ingredients": [
     "minecraft:stick",
-    "dawnbound:sharp_stone"
+    "#dawnbound:sharp_stones"
   ],
   "result": {
     "id": "dawnbound:digging_stick",

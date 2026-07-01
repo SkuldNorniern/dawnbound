@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "category": "equipment",
   "ingredients": [
-    "dawnbound:sharp_flint",
+    "#dawnbound:sharp_stones",
     "minecraft:stick",
     "dawnbound:cordage"
   ],
