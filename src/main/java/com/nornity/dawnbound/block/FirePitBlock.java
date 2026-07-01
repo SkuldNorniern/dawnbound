@@ -3,6 +3,7 @@ package com.nornity.dawnbound.block;
 import com.nornity.dawnbound.registry.ModItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
@@ -24,22 +25,24 @@ public class FirePitBlock extends Block {
     }
 
     @Override
-    protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
-        if (level.isClientSide()) {
-            return InteractionResult.PASS;
+    protected InteractionResult useItemOn(
+        ItemStack itemStack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult
+    ) {
+        if (hand != InteractionHand.MAIN_HAND || (!itemStack.is(ItemTags.LOGS) && !itemStack.is(ModItems.BARK.get()))) {
+            return InteractionResult.TRY_WITH_EMPTY_HAND;
         }
 
-        ItemStack held = player.getMainHandItem();
-        if (held.is(ItemTags.LOGS) || held.is(ModItems.BARK.get())) {
-            held.shrink(1);
+        if (!level.isClientSide()) {
+            if (!player.hasInfiniteMaterials()) {
+                itemStack.shrink(1);
+            }
             ItemStack charcoal = new ItemStack(Items.CHARCOAL);
             if (!player.getInventory().add(charcoal)) {
                 player.drop(charcoal, false);
             }
-            return InteractionResult.SUCCESS;
         }
 
-        return InteractionResult.PASS;
+        return InteractionResult.SUCCESS;
     }
 
     @Override

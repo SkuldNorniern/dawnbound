@@ -2,6 +2,7 @@ package com.nornity.dawnbound.block;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
@@ -26,22 +27,24 @@ public class PitKilnBlock extends Block {
     }
 
     @Override
-    protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
-        if (level.isClientSide()) {
-            return InteractionResult.PASS;
+    protected InteractionResult useItemOn(
+        ItemStack itemStack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult
+    ) {
+        if (hand != InteractionHand.MAIN_HAND || !itemStack.is(ItemTags.LOGS) || (!player.hasInfiniteMaterials() && itemStack.getCount() < LOG_COST)) {
+            return InteractionResult.TRY_WITH_EMPTY_HAND;
         }
 
-        ItemStack held = player.getMainHandItem();
-        if (held.is(ItemTags.LOGS) && held.getCount() >= LOG_COST) {
-            held.shrink(LOG_COST);
+        if (!level.isClientSide()) {
+            if (!player.hasInfiniteMaterials()) {
+                itemStack.shrink(LOG_COST);
+            }
             ItemStack charcoal = new ItemStack(Items.CHARCOAL, CHARCOAL_YIELD);
             if (!player.getInventory().add(charcoal)) {
                 player.drop(charcoal, false);
             }
-            return InteractionResult.SUCCESS;
         }
 
-        return InteractionResult.PASS;
+        return InteractionResult.SUCCESS;
     }
 
     @Override

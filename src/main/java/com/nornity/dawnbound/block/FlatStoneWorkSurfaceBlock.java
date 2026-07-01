@@ -2,6 +2,7 @@ package com.nornity.dawnbound.block;
 
 import com.nornity.dawnbound.registry.ModItems;
 import net.minecraft.core.BlockPos;
+import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
@@ -22,22 +23,24 @@ public class FlatStoneWorkSurfaceBlock extends Block {
     }
 
     @Override
-    protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
-        if (level.isClientSide()) {
-            return InteractionResult.SUCCESS;
+    protected InteractionResult useItemOn(
+        ItemStack itemStack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult
+    ) {
+        if (hand != InteractionHand.MAIN_HAND || (!itemStack.is(ModItems.SHARP_STONE.get()) && !itemStack.is(ModItems.LOOSE_STONE.get()))) {
+            return InteractionResult.TRY_WITH_EMPTY_HAND;
         }
 
-        ItemStack held = player.getMainHandItem();
-        if (held.is(ModItems.SHARP_STONE.get()) || held.is(ModItems.LOOSE_STONE.get())) {
-            held.shrink(1);
+        if (!level.isClientSide()) {
+            if (!player.hasInfiniteMaterials()) {
+                itemStack.shrink(1);
+            }
             ItemStack knapped = new ItemStack(ModItems.KNAPPED_STONE_HEAD.get());
             if (!player.getInventory().add(knapped)) {
                 player.drop(knapped, false);
             }
-            return InteractionResult.SUCCESS;
         }
 
-        return InteractionResult.PASS;
+        return InteractionResult.SUCCESS;
     }
 
     @Override

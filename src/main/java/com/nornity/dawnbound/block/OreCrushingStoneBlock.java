@@ -2,6 +2,7 @@ package com.nornity.dawnbound.block;
 
 import com.nornity.dawnbound.registry.ModItems;
 import net.minecraft.core.BlockPos;
+import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
@@ -37,23 +38,29 @@ public class OreCrushingStoneBlock extends Block {
     }
 
     @Override
-    protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
-        if (level.isClientSide()) {
-            return InteractionResult.PASS;
+    protected InteractionResult useItemOn(
+        ItemStack itemStack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult
+    ) {
+        if (hand != InteractionHand.MAIN_HAND) {
+            return InteractionResult.TRY_WITH_EMPTY_HAND;
         }
 
-        ItemStack held = player.getMainHandItem();
-        Item crushed = crushedResultFor(held.getItem());
-        if (crushed != null) {
-            held.shrink(1);
+        Item crushed = crushedResultFor(itemStack.getItem());
+        if (crushed == null) {
+            return InteractionResult.TRY_WITH_EMPTY_HAND;
+        }
+
+        if (!level.isClientSide()) {
+            if (!player.hasInfiniteMaterials()) {
+                itemStack.shrink(1);
+            }
             ItemStack result = new ItemStack(crushed, CRUSHED_YIELD);
             if (!player.getInventory().add(result)) {
                 player.drop(result, false);
             }
-            return InteractionResult.SUCCESS;
         }
 
-        return InteractionResult.PASS;
+        return InteractionResult.SUCCESS;
     }
 
     @Override

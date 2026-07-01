@@ -2,6 +2,7 @@ package com.nornity.dawnbound.block;
 
 import com.nornity.dawnbound.registry.ModItems;
 import net.minecraft.core.BlockPos;
+import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
@@ -26,25 +27,30 @@ public class ClayKilnBlock extends Block {
     }
 
     @Override
-    protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
-        if (level.isClientSide()) {
-            return InteractionResult.PASS;
+    protected InteractionResult useItemOn(
+        ItemStack itemStack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult
+    ) {
+        if (hand != InteractionHand.MAIN_HAND || !itemStack.is(ModItems.CRUSHED_COPPER_ORE.get())) {
+            return InteractionResult.TRY_WITH_EMPTY_HAND;
         }
 
-        ItemStack held = player.getMainHandItem();
         ItemStack offhand = player.getOffhandItem();
+        if (!offhand.is(Items.CHARCOAL)) {
+            return InteractionResult.TRY_WITH_EMPTY_HAND;
+        }
 
-        if (held.is(ModItems.CRUSHED_COPPER_ORE.get()) && offhand.is(Items.CHARCOAL)) {
-            held.shrink(1);
-            offhand.shrink(1);
+        if (!level.isClientSide()) {
+            if (!player.hasInfiniteMaterials()) {
+                itemStack.shrink(1);
+                offhand.shrink(1);
+            }
             ItemStack ingot = new ItemStack(Items.COPPER_INGOT, INGOT_YIELD);
             if (!player.getInventory().add(ingot)) {
                 player.drop(ingot, false);
             }
-            return InteractionResult.SUCCESS;
         }
 
-        return InteractionResult.PASS;
+        return InteractionResult.SUCCESS;
     }
 
     @Override
