@@ -23,6 +23,13 @@ public class HandRestrictionEvents {
             && !player.getMainHandItem().is(ItemTags.PICKAXES)) {
             event.setNewSpeed(0.0f);
             GuidanceMessages.sendActionBar(player, "dawnbound.message.requires_pickaxe");
+            return;
+        }
+        if (Config.SERVER.handBreakSoftBlocksOnly.get()
+            && player.getMainHandItem().isEmpty()
+            && !event.getState().is(ModBlockTags.SOFT_HAND_BREAKABLE)) {
+            event.setNewSpeed(0.0f);
+            GuidanceMessages.sendActionBar(player, "dawnbound.message.bare_hands_need_soft_materials");
         }
     }
 }

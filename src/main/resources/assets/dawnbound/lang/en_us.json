@@ -20,6 +20,7 @@
   "dawnbound.message.requires_hatchet": "You need a hatchet or axe for this.",
   "dawnbound.message.logs_need_hatchet": "Logs need a hatchet. Start with grass, leaves, or gravel.",
   "dawnbound.message.requires_pickaxe": "You need a pickaxe for this.",
+  "dawnbound.message.bare_hands_need_soft_materials": "Bare hands only handle soft materials. Try grass, leaves, gravel, or clay.",
   "dawnbound.message.fiber_hint": "Fiber can be twisted into cordage.",
   "dawnbound.message.sharp_edge_hint": "A sharp edge can become your first tool.",
   "dawnbound.message.cordage_hint": "Cordage binds your first crude tools.",
