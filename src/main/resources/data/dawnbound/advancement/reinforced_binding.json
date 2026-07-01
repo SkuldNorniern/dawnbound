@@ -1,0 +1,32 @@
+{
+  "parent": "dawnbound:knapped_head",
+  "criteria": {
+    "tool_binding": {
+      "conditions": {
+        "items": [
+          {
+            "items": "dawnbound:tool_binding"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.dawnbound.reinforced_binding.description"
+    },
+    "icon": {
+      "id": "dawnbound:tool_binding"
+    },
+    "title": {
+      "translate": "advancements.dawnbound.reinforced_binding.title"
+    }
+  },
+  "requirements": [
+    [
+      "tool_binding"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "dawnbound:reinforced_binding",
+  "criteria": {
+    "bound_head": {
+      "conditions": {
+        "items": [
+          {
+            "items": "dawnbound:bound_stone_head"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.dawnbound.bound_head.description"
+    },
+    "icon": {
+      "id": "dawnbound:bound_stone_head"
+    },
+    "title": {
+      "translate": "advancements.dawnbound.bound_head.title"
+    }
+  },
+  "requirements": [
+    [
+      "bound_head"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "dawnbound:bound_head",
+  "criteria": {
+    "bound_saw": {
+      "conditions": {
+        "items": [
+          {
+            "items": "dawnbound:bound_saw"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.dawnbound.bound_saw.description"
+    },
+    "icon": {
+      "id": "dawnbound:bound_saw"
+    },
+    "title": {
+      "translate": "advancements.dawnbound.bound_saw.title"
+    }
+  },
+  "requirements": [
+    [
+      "bound_saw"
+    ]
+  ],
+  "sends_telemetry_event": false
+}
