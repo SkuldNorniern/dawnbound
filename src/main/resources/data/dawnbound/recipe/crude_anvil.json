@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "SSS",
+    " O ",
+    "P P"
+  ],
+  "key": {
+    "S": "#dawnbound:sharp_stones",
+    "O": "dawnbound:ore_crushing_stone",
+    "P": "dawnbound:rough_planks"
+  },
+  "result": {
+    "id": "dawnbound:crude_anvil",
+    "count": 1
+  }
+}

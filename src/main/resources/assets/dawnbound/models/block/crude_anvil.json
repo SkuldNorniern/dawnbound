@@ -1,0 +1,45 @@
+{
+  "textures": {
+    "stone": "dawnbound:block/ore_crushing_stone/base",
+    "face": "dawnbound:block/flat_stone_work_surface",
+    "particle": "dawnbound:block/ore_crushing_stone/base"
+  },
+  "elements": [
+    {
+      "from": [3, 0, 4],
+      "to": [13, 2, 12],
+      "faces": {
+        "north": { "uv": [0, 0, 16, 16], "texture": "#stone" },
+        "south": { "uv": [0, 0, 16, 16], "texture": "#stone" },
+        "east": { "uv": [0, 0, 16, 16], "texture": "#stone" },
+        "west": { "uv": [0, 0, 16, 16], "texture": "#stone" },
+        "up": { "uv": [0, 0, 16, 16], "texture": "#face" },
+        "down": { "uv": [0, 0, 16, 16], "texture": "#stone" }
+      }
+    },
+    {
+      "from": [5, 2, 5],
+      "to": [11, 5, 11],
+      "faces": {
+        "north": { "uv": [0, 0, 16, 16], "texture": "#stone" },
+        "south": { "uv": [0, 0, 16, 16], "texture": "#stone" },
+        "east": { "uv": [0, 0, 16, 16], "texture": "#stone" },
+        "west": { "uv": [0, 0, 16, 16], "texture": "#stone" },
+        "up": { "uv": [0, 0, 16, 16], "texture": "#face" },
+        "down": { "uv": [0, 0, 16, 16], "texture": "#stone" }
+      }
+    },
+    {
+      "from": [2, 5, 3],
+      "to": [14, 8, 13],
+      "faces": {
+        "north": { "uv": [0, 0, 16, 16], "texture": "#stone" },
+        "south": { "uv": [0, 0, 16, 16], "texture": "#stone" },
+        "east": { "uv": [0, 0, 16, 16], "texture": "#stone" },
+        "west": { "uv": [0, 0, 16, 16], "texture": "#stone" },
+        "up": { "uv": [0, 0, 16, 16], "texture": "#face" },
+        "down": { "uv": [0, 0, 16, 16], "texture": "#stone" }
+      }
+    }
+  ]
+}

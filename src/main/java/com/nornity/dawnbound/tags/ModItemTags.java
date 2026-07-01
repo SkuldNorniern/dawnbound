@@ -24,6 +24,8 @@ public class ModItemTags {
         TagKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath("dawnbound", "crude_handles"));
     public static final TagKey<Item> TOOL_BINDINGS =
         TagKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath("dawnbound", "tool_bindings"));
+    public static final TagKey<Item> ANVIL_REPAIRABLE_TOOLS =
+        TagKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath("dawnbound", "anvil_repairable_tools"));
     public static final TagKey<Item> SAWS =
         TagKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath("dawnbound", "saws"));
 }

@@ -68,6 +68,8 @@ public class ModItems {
         ITEMS.registerSimpleBlockItem(ModBlocks.FIRE_PIT);
     public static final DeferredItem<BlockItem> ORE_CRUSHING_STONE =
         ITEMS.registerSimpleBlockItem(ModBlocks.ORE_CRUSHING_STONE);
+    public static final DeferredItem<BlockItem> CRUDE_ANVIL =
+        ITEMS.registerSimpleBlockItem(ModBlocks.CRUDE_ANVIL);
     public static final DeferredItem<BlockItem> CLAY_KILN =
         ITEMS.registerSimpleBlockItem(ModBlocks.CLAY_KILN);
     public static final DeferredItem<BlockItem> BLOOMERY =

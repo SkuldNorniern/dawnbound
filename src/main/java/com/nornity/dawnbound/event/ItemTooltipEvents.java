@@ -96,6 +96,9 @@ public class ItemTooltipEvents {
         if (item == ModItems.ORE_CRUSHING_STONE.get()) {
             return "block.dawnbound.ore_crushing_stone.tooltip";
         }
+        if (item == ModItems.CRUDE_ANVIL.get()) {
+            return "block.dawnbound.crude_anvil.tooltip";
+        }
         if (item == ModItems.CLAY_KILN.get()) {
             return "block.dawnbound.clay_kiln.tooltip";
         }

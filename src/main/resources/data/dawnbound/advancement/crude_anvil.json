@@ -1,0 +1,32 @@
+{
+  "parent": "dawnbound:reinforced_binding",
+  "criteria": {
+    "crude_anvil": {
+      "conditions": {
+        "items": [
+          {
+            "items": "dawnbound:crude_anvil"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.dawnbound.crude_anvil.description"
+    },
+    "icon": {
+      "id": "dawnbound:crude_anvil"
+    },
+    "title": {
+      "translate": "advancements.dawnbound.crude_anvil.title"
+    }
+  },
+  "requirements": [
+    [
+      "crude_anvil"
+    ]
+  ],
+  "sends_telemetry_event": false
+}
