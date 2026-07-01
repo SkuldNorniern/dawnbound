@@ -1,0 +1,32 @@
+{
+  "parent": "dawnbound:rough_planks",
+  "criteria": {
+    "planks": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#minecraft:planks"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.dawnbound.clean_cut.description"
+    },
+    "icon": {
+      "id": "dawnbound:saw"
+    },
+    "title": {
+      "translate": "advancements.dawnbound.clean_cut.title"
+    }
+  },
+  "requirements": [
+    [
+      "planks"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

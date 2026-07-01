@@ -40,5 +40,21 @@
   "dawnbound.onboarding.intro.2": "Your bare hands cannot harvest logs.",
   "dawnbound.onboarding.intro.3": "Start with grass, leaves, gravel, and clay.",
   "dawnbound.onboarding.intro.4": "Make cordage, sharp stone, and your first hatchet.",
-  "block.dawnbound.pit_kiln": "Pit Kiln"
+  "block.dawnbound.pit_kiln": "Pit Kiln",
+  "advancements.dawnbound.root.title": "Empty Hands",
+  "advancements.dawnbound.root.description": "Dawnbound changes the first day. Start with what the ground gives you.",
+  "advancements.dawnbound.soft_beginnings.title": "Soft Beginnings",
+  "advancements.dawnbound.soft_beginnings.description": "Gather plant fiber from grass or leaves.",
+  "advancements.dawnbound.sharp_edge.title": "A Sharp Edge",
+  "advancements.dawnbound.sharp_edge.description": "Find sharp flint or sharp stone from gravel.",
+  "advancements.dawnbound.twisted_fiber.title": "Twisted Fiber",
+  "advancements.dawnbound.twisted_fiber.description": "Twist plant fiber into cordage.",
+  "advancements.dawnbound.first_tool.title": "First Tool",
+  "advancements.dawnbound.first_tool.description": "Make a flint knife or stone hatchet.",
+  "advancements.dawnbound.wood_finally.title": "Wood, Finally",
+  "advancements.dawnbound.wood_finally.description": "Harvest a log with the right crude tool.",
+  "advancements.dawnbound.rough_planks.title": "Rough Planks",
+  "advancements.dawnbound.rough_planks.description": "Chop logs into rough planks before you have a saw.",
+  "advancements.dawnbound.clean_cut.title": "Clean Cut",
+  "advancements.dawnbound.clean_cut.description": "Use saw-cut planks for cleaner woodworking."
 }

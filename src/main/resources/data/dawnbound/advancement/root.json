@@ -1,0 +1,27 @@
+{
+  "criteria": {
+    "start": {
+      "trigger": "minecraft:tick"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "background": "minecraft:gui/advancements/backgrounds/stone",
+    "description": {
+      "translate": "advancements.dawnbound.root.description"
+    },
+    "icon": {
+      "id": "dawnbound:sharp_flint"
+    },
+    "show_toast": false,
+    "title": {
+      "translate": "advancements.dawnbound.root.title"
+    }
+  },
+  "requirements": [
+    [
+      "start"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

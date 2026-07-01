@@ -1,0 +1,32 @@
+{
+  "parent": "dawnbound:sharp_edge",
+  "criteria": {
+    "cordage": {
+      "conditions": {
+        "items": [
+          {
+            "items": "dawnbound:cordage"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.dawnbound.twisted_fiber.description"
+    },
+    "icon": {
+      "id": "dawnbound:cordage"
+    },
+    "title": {
+      "translate": "advancements.dawnbound.twisted_fiber.title"
+    }
+  },
+  "requirements": [
+    [
+      "cordage"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

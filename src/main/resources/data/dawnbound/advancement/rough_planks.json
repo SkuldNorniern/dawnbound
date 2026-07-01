@@ -1,0 +1,32 @@
+{
+  "parent": "dawnbound:wood_finally",
+  "criteria": {
+    "rough_planks": {
+      "conditions": {
+        "items": [
+          {
+            "items": "dawnbound:rough_planks"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.dawnbound.rough_planks.description"
+    },
+    "icon": {
+      "id": "dawnbound:rough_planks"
+    },
+    "title": {
+      "translate": "advancements.dawnbound.rough_planks.title"
+    }
+  },
+  "requirements": [
+    [
+      "rough_planks"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

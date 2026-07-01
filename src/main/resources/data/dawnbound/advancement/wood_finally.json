@@ -1,0 +1,32 @@
+{
+  "parent": "dawnbound:first_tool",
+  "criteria": {
+    "log": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#minecraft:logs"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.dawnbound.wood_finally.description"
+    },
+    "icon": {
+      "id": "minecraft:oak_log"
+    },
+    "title": {
+      "translate": "advancements.dawnbound.wood_finally.title"
+    }
+  },
+  "requirements": [
+    [
+      "log"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

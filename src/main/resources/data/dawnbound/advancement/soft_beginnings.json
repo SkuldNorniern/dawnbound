@@ -1,0 +1,32 @@
+{
+  "parent": "dawnbound:root",
+  "criteria": {
+    "plant_fiber": {
+      "conditions": {
+        "items": [
+          {
+            "items": "dawnbound:plant_fiber"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.dawnbound.soft_beginnings.description"
+    },
+    "icon": {
+      "id": "dawnbound:plant_fiber"
+    },
+    "title": {
+      "translate": "advancements.dawnbound.soft_beginnings.title"
+    }
+  },
+  "requirements": [
+    [
+      "plant_fiber"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

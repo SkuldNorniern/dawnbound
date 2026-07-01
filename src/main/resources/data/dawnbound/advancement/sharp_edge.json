@@ -1,0 +1,43 @@
+{
+  "parent": "dawnbound:soft_beginnings",
+  "criteria": {
+    "sharp_flint": {
+      "conditions": {
+        "items": [
+          {
+            "items": "dawnbound:sharp_flint"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "sharp_stone": {
+      "conditions": {
+        "items": [
+          {
+            "items": "dawnbound:sharp_stone"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.dawnbound.sharp_edge.description"
+    },
+    "icon": {
+      "id": "dawnbound:sharp_flint"
+    },
+    "title": {
+      "translate": "advancements.dawnbound.sharp_edge.title"
+    }
+  },
+  "requirements": [
+    [
+      "sharp_flint",
+      "sharp_stone"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

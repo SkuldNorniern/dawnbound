@@ -40,5 +40,21 @@
   "dawnbound.onboarding.intro.2": "맨손으로는 통나무를 채집할 수 없습니다.",
   "dawnbound.onboarding.intro.3": "풀, 잎, 자갈, 점토부터 모으세요.",
   "dawnbound.onboarding.intro.4": "노끈과 날카로운 돌, 첫 손도끼를 만드세요.",
-  "block.dawnbound.pit_kiln": "구덩이 가마"
+  "block.dawnbound.pit_kiln": "구덩이 가마",
+  "advancements.dawnbound.root.title": "빈손",
+  "advancements.dawnbound.root.description": "던바운드는 첫날의 생존 방식을 바꿉니다. 땅에서 얻을 수 있는 것부터 시작하세요.",
+  "advancements.dawnbound.soft_beginnings.title": "부드러운 시작",
+  "advancements.dawnbound.soft_beginnings.description": "풀이나 잎에서 식물 섬유를 모으세요.",
+  "advancements.dawnbound.sharp_edge.title": "날카로운 모서리",
+  "advancements.dawnbound.sharp_edge.description": "자갈에서 날카로운 부싯돌이나 돌을 찾으세요.",
+  "advancements.dawnbound.twisted_fiber.title": "꼬아 만든 섬유",
+  "advancements.dawnbound.twisted_fiber.description": "식물 섬유를 꼬아 노끈을 만드세요.",
+  "advancements.dawnbound.first_tool.title": "첫 도구",
+  "advancements.dawnbound.first_tool.description": "부싯돌 칼이나 돌 손도끼를 만드세요.",
+  "advancements.dawnbound.wood_finally.title": "드디어 나무",
+  "advancements.dawnbound.wood_finally.description": "알맞은 조잡한 도구로 통나무를 채집하세요.",
+  "advancements.dawnbound.rough_planks.title": "거친 널빤지",
+  "advancements.dawnbound.rough_planks.description": "톱이 생기기 전에는 통나무를 쪼개 거친 널빤지를 만드세요.",
+  "advancements.dawnbound.clean_cut.title": "깔끔한 절단",
+  "advancements.dawnbound.clean_cut.description": "더 깔끔한 목공을 위해 톱으로 자른 널빤지를 사용하세요."
 }

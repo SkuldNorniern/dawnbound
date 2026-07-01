@@ -1,0 +1,43 @@
+{
+  "parent": "dawnbound:twisted_fiber",
+  "criteria": {
+    "flint_knife": {
+      "conditions": {
+        "items": [
+          {
+            "items": "dawnbound:flint_knife"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "stone_hatchet": {
+      "conditions": {
+        "items": [
+          {
+            "items": "dawnbound:stone_hatchet"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.dawnbound.first_tool.description"
+    },
+    "icon": {
+      "id": "dawnbound:stone_hatchet"
+    },
+    "title": {
+      "translate": "advancements.dawnbound.first_tool.title"
+    }
+  },
+  "requirements": [
+    [
+      "flint_knife",
+      "stone_hatchet"
+    ]
+  ],
+  "sends_telemetry_event": false
+}
