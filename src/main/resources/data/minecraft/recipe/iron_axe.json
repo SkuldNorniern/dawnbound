@@ -8,8 +8,8 @@
   ],
   "key": {
     "I": "minecraft:iron_ingot",
-    "H": "dawnbound:crude_handle",
-    "B": "dawnbound:tool_binding"
+    "H": "#dawnbound:crude_handles",
+    "B": "#dawnbound:tool_bindings"
   },
   "result": {
     "id": "minecraft:iron_axe",

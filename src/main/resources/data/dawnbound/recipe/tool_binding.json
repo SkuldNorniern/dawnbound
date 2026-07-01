@@ -3,7 +3,7 @@
   "category": "misc",
   "ingredients": [
     "dawnbound:rawhide_cord",
-    "dawnbound:resin"
+    "#dawnbound:resin_binders"
   ],
   "result": {
     "id": "dawnbound:tool_binding",

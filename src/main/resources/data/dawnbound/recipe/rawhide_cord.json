@@ -3,7 +3,7 @@
   "category": "misc",
   "ingredients": [
     "dawnbound:cordage",
-    "minecraft:leather"
+    "#dawnbound:rawhide_materials"
   ],
   "result": {
     "id": "dawnbound:rawhide_cord",

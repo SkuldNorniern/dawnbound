@@ -2,8 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    "dawnbound:knapped_stone_head",
-    "dawnbound:tool_binding"
+    "#dawnbound:knapped_tool_heads",
+    "#dawnbound:tool_bindings"
   ],
   "result": {
     "id": "dawnbound:bound_stone_head",
